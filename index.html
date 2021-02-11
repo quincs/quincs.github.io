@@ -24,8 +24,19 @@
   <script>
     bgm.volume = 0.04;
     window.onclick = () => {
-            bgm.play();
-        }
+      bgm.play();
+    }
+
+    msg = "quin.codes ";
+    position = 0;
+
+    function scrolltitle() {
+      document.title = msg.substring(position, msg.length) + msg.substring(0, position);
+      position++;
+      if (position > msg.length) position = 0
+      window.setTimeout("scrolltitle()", 250);
+    }
+    scrolltitle();
   </script>
   <section class="hero is-fullheight">
     <div class="hero-body">
