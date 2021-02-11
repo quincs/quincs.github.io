@@ -17,6 +17,7 @@
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="./style.css">
   <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,9 +25,22 @@
 
   </audio>
   <script>
+    function randomIntFromInterval(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    function getSong(num) {
+      if(num == 1) return "Boef - Habiba"
+        else if (num == 2) return "scarlxrd - THE PURGE"       
+          else if (num == 3) return "CORPSE - E-GIRLS ARE RUINING MY LIFE! ft. Savage Ga$p"
+    }
+    var song;
+    let num = randomIntFromInterval(1,3);
+    bgm.src = `${num}.mp3` 
     bgm.volume = 0.04;
     window.onclick = () => {
       bgm.play();
+      let song = getSong(num);
+      $(".test h3").html("Currently listening to: " + song);
     }
 
     msg = "quin.codes ";
@@ -47,9 +61,14 @@
           <h1 id="app" class="title">
             quin
           </h1>
-          <h3 class="subtitle" style="padding-top: 20px;">
+          <div class="test">
+          <h3 id="abouttext" class="subtitle" style="padding-top: 20px;">
             Backend developer, reverse engineer.
           </h3>
+          <script>
+            subtitle.innerText("kanker")
+          </script>
+          </div>
           <h4>
             &nbsp;
             <a class="linksubtitle" href="https://github.com/quincs">
@@ -111,7 +130,9 @@
       </div>
     </div>
   </section>
-
+<script>
+  
+</script>
 
 </body>
 
