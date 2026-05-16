@@ -465,6 +465,487 @@
           "veiligheid": null
         }
       }
+    },
+    "remeha": {
+      "naam": "Remeha",
+      "kleur": "#005aab",
+      "beschrijving": "Remeha is een toonaangevend Nederlands merk met een breed assortiment HR-ketels. De Avanta is een compacte wandketel (24c, 28c, 35c) met eenvoudige bediening.",
+      "modellen": {
+        "avanta": {
+          "naam": "Avanta",
+          "info": "24c · 28c · 35c",
+          "storingen": [
+            "e0",
+            "e1",
+            "e2",
+            "e3",
+            "e4",
+            "e5",
+            "e6",
+            "e7",
+            "e8",
+            "e9",
+            "e10",
+            "e11",
+            "e12",
+            "e13",
+            "e43",
+            "e44",
+            "e45"
+          ]
+        }
+      },
+      "storingen": {
+        "e0": {
+          "code": "E0",
+          "beschrijving": "Storing aanvoer- of retoursensor",
+          "oorzaken": [
+            "Kortsluiting in sensorbedrading",
+            "Sensor defect",
+            "Sensor niet of slecht aangesloten"
+          ],
+          "controlepunten": [
+            "Controleer de bedrading",
+            "Breng beschermdoppen terug op hun plaats",
+            "Meet sensorweerstand met multimeter"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer bedrading",
+              "omschrijving": "Controleer de bedrading. Breng de beschermdoppen terug op hun plaats."
+            },
+            {
+              "titel": "Meet sensor",
+              "omschrijving": "Meet de weerstand van de sensor bij 20-25°C: verwacht 12-15 kΩ. Plaats (nieuwe) sensoren maximaal 40 mm onder de warmtewisselaar."
+            },
+            {
+              "titel": "Vervang sensor",
+              "omschrijving": "Vervang de defecte aanvoer- of retoursensor indien de weerstand afwijkt."
+            }
+          ],
+          "vervanging": "Vervang defecte aanvoer- of retoursensor",
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e1": {
+          "code": "E1",
+          "beschrijving": "Aanvoertemperatuur hoger dan maximale werktemperatuur",
+          "oorzaken": [
+            "Waterdruk of waterpeil te laag",
+            "Geen doorstroming",
+            "Te veel lucht in installatie",
+            "Afwijking aanvoer- of retoursensor"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk CV-installatie",
+            "Controleer circulatiepomp en bedrading",
+            "Ontlucht ketel bij uitgeschakelde pomp"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer waterdruk",
+              "omschrijving": "Controleer de waterdruk van de CV-installatie (ca. 1,5-2 bar)."
+            },
+            {
+              "titel": "Controleer pomp",
+              "omschrijving": "Steek een schroevendraaier in de gleuf van de pompas en draai meerdere malen. Controleer de bedrading van de circulatiepomp."
+            },
+            {
+              "titel": "Ontlucht",
+              "omschrijving": "Ontlucht de ketel wanneer de pomp uitgeschakeld is."
+            },
+            {
+              "titel": "Controleer sensoren",
+              "omschrijving": "Controleer aanvoer- en retoursensor; meet weerstand 12-15 kΩ bij 20-25°C."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e2": {
+          "code": "E2",
+          "beschrijving": "Retourtemperatuur hoger dan aanvoertemperatuur",
+          "oorzaken": [
+            "Waterdruk of waterpeil te laag",
+            "Geen doorstroming",
+            "Te veel lucht",
+            "Sensor niet of slecht aangesloten",
+            "Afwijking temperatuursensor"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk",
+            "Controleer pomp en bedrading",
+            "Controleer bekabeling sensors"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer installatie",
+              "omschrijving": "Controleer waterdruk, pompwerking en ontluchting van de installatie."
+            },
+            {
+              "titel": "Controleer sensoren",
+              "omschrijving": "Controleer bekabeling tussen sensors en bedieningspaneel. Meet sensorweerstand (12-15 kΩ bij 20-25°C)."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e3": {
+          "code": "E3",
+          "beschrijving": "Storing bedieningspaneel of voeding",
+          "oorzaken": [
+            "Bedieningspaneel defect",
+            "Voedingskabel defect",
+            "Voedingskabel slecht aangesloten"
+          ],
+          "controlepunten": [
+            "Controleer elektrische aansluitingen",
+            "Controleer netspanning en zekering"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer aansluitingen",
+              "omschrijving": "Controleer de elektrische aansluitingen van het bedieningspaneel en de voedingskabel."
+            },
+            {
+              "titel": "Controleer voeding",
+              "omschrijving": "Controleer of de ketel op het net is aangesloten en of zekering F1 (2 AT) in orde is."
+            }
+          ],
+          "vervanging": "Vervang display of besturingsautomaat indien defect",
+          "installateur": "Vervang voedingskabel alleen met Remeha-onderdeel",
+          "veiligheid": null
+        },
+        "e4": {
+          "code": "E4",
+          "beschrijving": "Geen vlamvorming na maximaal 5 startpogingen",
+          "oorzaken": [
+            "Geen ontstekingsvonk",
+            "Wel vonk maar geen vlam",
+            "Wel vlam maar onvoldoende ionisatie"
+          ],
+          "controlepunten": [
+            "Controleer ontsteking en elektroden",
+            "Controleer gastoevoer en gasdruk",
+            "Controleer rookgasafvoer en sifon"
+          ],
+          "stappen": [
+            {
+              "titel": "Geen ontstekingsvonk",
+              "omschrijving": "Controleer ontstekingstransformator, ontstekingskabel, tussenafstand elektroden (3-4 mm) en aarding."
+            },
+            {
+              "titel": "Geen vlam",
+              "omschrijving": "Controleer gaskraan, gasdruk, ontluchting gasleiding, rookgasafvoer, sifon en netspanning."
+            },
+            {
+              "titel": "Ionisatie",
+              "omschrijving": "Reinig of vervang ionisatie-/ontstekingselektrode. Controleer O2 op vollast en laaglast."
+            }
+          ],
+          "vervanging": "Vervang ontstekingselektrode of ontstekingstransformator indien nodig",
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e5": {
+          "code": "E5",
+          "beschrijving": "Fout in ionisatie",
+          "oorzaken": [
+            "Afstelling O2 niet juist",
+            "Ionisatie-elektrode vervuild of defect",
+            "Probleem rookgasafvoer of luchttoevoer"
+          ],
+          "controlepunten": [
+            "Controleer O2 op gasblok",
+            "Controleer ionisatie-elektrode",
+            "Controleer concentrische rookgas-/luchtpijpen"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer O2",
+              "omschrijving": "Controleer het O2-gehalte op het gasblok en de gascirculatie op vollast."
+            },
+            {
+              "titel": "Controleer elektrode",
+              "omschrijving": "Reinig of vervang de ionisatie-/ontstekingselektrode. Controleer tussenafstand 3-4 mm."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e6": {
+          "code": "E6",
+          "beschrijving": "Ongewenste vlamvorming",
+          "oorzaken": [
+            "Ontstekingstrafo defect",
+            "Automaat defect"
+          ],
+          "controlepunten": [
+            "Controleer ontstekingstrafo",
+            "Controleer besturingsautomaat"
+          ],
+          "stappen": [
+            {
+              "titel": "Diagnose",
+              "omschrijving": "De ketel detecteert een vlam terwijl er geen branderstart is. Controleer ontstekingstrafo en automaat."
+            }
+          ],
+          "vervanging": "Vervang ontstekingstransformator of besturingsautomaat",
+          "installateur": "Schakel een erkend installateur in",
+          "veiligheid": null
+        },
+        "e7": {
+          "code": "E7",
+          "beschrijving": "Geen water in de ketel of pomp draait niet",
+          "oorzaken": [
+            "Waterdruk of waterpeil te laag",
+            "Geen doorstroming",
+            "Te veel lucht",
+            "Verkeerde pompbekabeling"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk en lekkages",
+            "Controleer circulatiepomp",
+            "Controleer pompbekabeling"
+          ],
+          "stappen": [
+            {
+              "titel": "Waterdruk",
+              "omschrijving": "Controleer waterdruk en eventuele lekkages."
+            },
+            {
+              "titel": "Pomp",
+              "omschrijving": "Controleer werking en bedrading van de circulatiepomp. Ontlucht bij uitgeschakelde pomp."
+            },
+            {
+              "titel": "Bekabeling",
+              "omschrijving": "Controleer de elektrische aansluitingen van de pomp."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e8": {
+          "code": "E8",
+          "beschrijving": "Ventilator defect",
+          "oorzaken": [
+            "Ventilator werkt niet",
+            "Ventilator stopt niet",
+            "Onjuist toerental",
+            "Onvoldoende schoorsteentrek"
+          ],
+          "controlepunten": [
+            "Controleer ventilator en bekabeling",
+            "Controleer schoorsteentrek"
+          ],
+          "stappen": [
+            {
+              "titel": "Ventilator",
+              "omschrijving": "Controleer werking en bekabeling van de ventilator."
+            },
+            {
+              "titel": "Rookgasafvoer",
+              "omschrijving": "Controleer of de schoorsteen volgens voorschrift trekt."
+            }
+          ],
+          "vervanging": "Vervang ventilator indien defect",
+          "installateur": "Bij kortsluiting ventilator: ketel testen zonder ventilatorkabel; ventilator vervangen indien display terugkomt",
+          "veiligheid": null
+        },
+        "e9": {
+          "code": "E9",
+          "beschrijving": "Geen water in de ketel",
+          "oorzaken": [
+            "Waterdruk of waterpeil te laag",
+            "Lekkage",
+            "Expansievat problemen"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk",
+            "Controleer expansievat",
+            "Vul en ontlucht installatie"
+          ],
+          "stappen": [
+            {
+              "titel": "Vullen",
+              "omschrijving": "Vul de CV-installatie met schoon leidingwater. Ontlucht de installatie."
+            },
+            {
+              "titel": "Reset",
+              "omschrijving": "Reset de ketel na bijvullen."
+            },
+            {
+              "titel": "Drukschakelaar",
+              "omschrijving": "Controleer waterdrukschakelaar; vervang indien defect."
+            }
+          ],
+          "vervanging": "Vervang waterdrukschakelaar indien defect",
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e10": {
+          "code": "E10",
+          "beschrijving": "Geen doorstroming (ontluchtingscyclus)",
+          "oorzaken": [
+            "Waterdruk te laag",
+            "Geen doorstroming",
+            "Te veel lucht",
+            "Verkeerde pompbekabeling"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk en lekkages",
+            "Controleer pomp en bedrading"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer installatie",
+              "omschrijving": "Zelfde controles als bij geen water/pomp: druk, pomp, ontluchting en bekabeling."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e11": {
+          "code": "E11",
+          "beschrijving": "Luchtkasttemperatuur te hoog",
+          "oorzaken": [
+            "Rookgaslekkage"
+          ],
+          "controlepunten": [
+            "Neem contact op met fabrikant bij rookgaslekkage"
+          ],
+          "stappen": [
+            {
+              "titel": "Rookgaslekkage",
+              "omschrijving": "Rookgaslekkage: neem contact op met de fabrikant."
+            }
+          ],
+          "vervanging": null,
+          "installateur": "Neem contact op met Remeha of erkend installateur",
+          "veiligheid": null
+        },
+        "e12": {
+          "code": "E12",
+          "beschrijving": "Warmteterugwinunit (WTW)",
+          "oorzaken": [
+            "Sensor niet of slecht aangesloten",
+            "Bedradingsfout",
+            "Onjuiste parameter WTW"
+          ],
+          "controlepunten": [
+            "Controleer WTW-aansluiting en parameters",
+            "Controleer sensoren en bedrading"
+          ],
+          "stappen": [
+            {
+              "titel": "WTW",
+              "omschrijving": "Controleer de aansluiting van de warmteterugwinunit en de bijbehorende parameterinstelling."
+            },
+            {
+              "titel": "Sensoren",
+              "omschrijving": "Controleer aansluiting en bedrading van de sensoren."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e13": {
+          "code": "E13",
+          "beschrijving": "Smeltbeveiliging warmtewisselaar aangesproken",
+          "oorzaken": [
+            "Waterdruk te laag",
+            "Geen doorstroming",
+            "Te veel lucht",
+            "Rookgaslekkage",
+            "Thermische beveiliging"
+          ],
+          "controlepunten": [
+            "Controleer waterdruk en doorstroming",
+            "Controleer smeltbeveiliging en bekabeling"
+          ],
+          "stappen": [
+            {
+              "titel": "Installatie",
+              "omschrijving": "Controleer waterdruk, lekkages, pomp en ontluchting."
+            },
+            {
+              "titel": "Smeltbeveiliging",
+              "omschrijving": "Controleer stekker en bekabeling smeltbeveiliging; meet door."
+            },
+            {
+              "titel": "Warmtewisselaar",
+              "omschrijving": "Vervang warmtewisselaar bij afwijking. Bij thermische beveiliging: contact fabrikant."
+            }
+          ],
+          "vervanging": "Vervang warmtewisselaar wanneer afwijking wordt geconstateerd",
+          "installateur": "Neem contact op met fabrikant bij thermische beveiliging",
+          "veiligheid": null
+        },
+        "e43": {
+          "code": "E43",
+          "beschrijving": "Grenzen van de parameters (instelling 1)",
+          "oorzaken": [
+            "Parameterinstellingen niet juist"
+          ],
+          "controlepunten": [
+            "Reset naar fabrieksinstellingen"
+          ],
+          "stappen": [
+            {
+              "titel": "Parameters",
+              "omschrijving": "Parameterinstellingen zijn niet juist: zet terug naar fabrieksinstellingen."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e44": {
+          "code": "E44",
+          "beschrijving": "Grenzen van de parameters (instelling 2)",
+          "oorzaken": [
+            "Parameterinstellingen niet juist"
+          ],
+          "controlepunten": [
+            "Reset naar fabrieksinstellingen"
+          ],
+          "stappen": [
+            {
+              "titel": "Parameters",
+              "omschrijving": "Parameterinstellingen zijn niet juist: zet terug naar fabrieksinstellingen."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "e45": {
+          "code": "E45",
+          "beschrijving": "Grenzen van de parameters (vervang automaat)",
+          "oorzaken": [
+            "Parameterinstellingen niet juist",
+            "Besturingsautomaat defect"
+          ],
+          "controlepunten": [
+            "Controleer parameterinstellingen"
+          ],
+          "stappen": [
+            {
+              "titel": "Parameters",
+              "omschrijving": "Parameterinstellingen zijn niet juist: vervang de besturingsautomaat."
+            }
+          ],
+          "vervanging": "Vervang besturingsautomaat",
+          "installateur": "Laat parameterherstel uitvoeren door erkend installateur",
+          "veiligheid": null
+        }
+      }
     }
   }
 }
