@@ -34,10 +34,33 @@
         }
       },
       "storingen": {
+        "0": {
+          "code": "0",
+          "beschrijving": "Sensorfout na zelfcontrole",
+          "oorzaken": [
+            "S1 en/of S2 sensor defect"
+          ],
+          "controlepunten": [
+            "Controleer beide sensoren",
+            "Vervang defecte sensor"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer sensoren",
+              "omschrijving": "Inspecteer beide sensoren (S1 en S2) op beschadigingen of vervuiling."
+            },
+            {
+              "titel": "Vervang sensor",
+              "omschrijving": "Vervang de defecte sensor met een origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang de defecte sensor S1 en/of S2",
+          "installateur": "Vervang sensoren altijd correct; incorrect gemonteerde sensoren kunnen ernstige schade veroorzaken",
+          "veiligheid": null
+        },
         "1": {
           "code": "1",
           "beschrijving": "Temperatuur te hoog",
-          "ernst": "laag",
           "oorzaken": [
             "Lucht in installatie",
             "Pomp draait niet",
@@ -66,106 +89,9 @@
           "installateur": null,
           "veiligheid": null
         },
-        "26": {
-          "code": "26",
-          "beschrijving": "Aansteekbeveiliging – vlam valt weg na ontsteking",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Gasdruk te laag of gastoevoer onderbroken",
-            "Elektrode vervuild of verkeerd ingesteld",
-            "Ionisatiesensor defect of slechte verbinding",
-            "Warmtewisselaar vervuild",
-            "Luchtoverschot door verstopte brander"
-          ],
-          "controlepunten": [
-            "Controleer gasafsluiter",
-            "Meet gasdruk",
-            "Inspecteer en reinig elektrode",
-            "Meet ionisatiestroom",
-            "Controleer verbrandingsluchttoevoer"
-          ],
-          "stappen": [
-            {
-              "titel": "Reset de foutcode",
-              "omschrijving": "Druk op de resetknop op het bedieningspaneel. Kijk of de ketel opnieuw probeert aan te slaan."
-            },
-            {
-              "titel": "Controleer gastoevoer",
-              "omschrijving": "Verifieer dat de hoofdgasafsluiter en ketelgasafsluiter volledig open zijn."
-            },
-            {
-              "titel": "Meet de gasdruk",
-              "omschrijving": "Sluit manometer aan op testpunt. Statische druk: 25 mbar. Dynamische druk bij vollast: min. 18 mbar."
-            },
-            {
-              "titel": "Reinig de elektrode",
-              "omschrijving": "Demonteer elektrode. Reinig met fijn schuurpapier. Controleer afslagafstand: 3 mm ±0,5 mm."
-            },
-            {
-              "titel": "Controleer ionisatiekabel",
-              "omschrijving": "Meet weerstand van ionisatiekabel (max. 5 kΩ). Controleer stekkerverbinding op PCB."
-            }
-          ],
-          "vervanging": "Vervang elektrode als afslagafstand niet instelbaar is. Vervang ionisatiekabel bij weerstand > 5 kΩ.",
-          "installateur": "Schakel erkend installateur in als gasdruk buiten specificatie valt",
-          "veiligheid": "Schakel gastoevoer nooit handmatig open als gaslucht waarneembaar is. Ventileer ruimte en bel netbeheerder."
-        },
-        "ce": {
-          "code": "CE",
-          "beschrijving": "Communicatiefout tussen ketel en regelaar",
-          "ernst": "laag",
-          "oorzaken": [
-            "Slechte verbinding van de bedrading op de OpenTherm of EMS bus",
-            "Defecte thermostaat of gateway",
-            "Verkeerde parameters ingesteld"
-          ],
-          "controlepunten": [
-            "Controleer de aansluitklemmen van de thermostaat op de ketel",
-            "Test of de ketel normaal functioneert op handmatige instelling"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer aansluitingen",
-              "omschrijving": "Zorg dat de bedrading goed aangedrukt is op de klemmen. Reinig eventueel oxide op de klemmen."
-            },
-            {
-              "titel": "Test zonder thermostaat",
-              "omschrijving": "Koppel de thermostaat los en stel de ketel in op handmatige modus. Als de ketel nu normaal werkt, is het probleem in de thermostaat of bedrading."
-            }
-          ],
-          "vervanging": "Vervang thermostaat of gateway indien defect.",
-          "installateur": "Buscommunicatieproblemen kunnen complex zijn; raadpleeg de fabrikant servicedesk.",
-          "veiligheid": null
-        },
-        "0": {
-          "code": "0",
-          "beschrijving": "Sensorfout na zelfcontrole",
-          "ernst": "hoog",
-          "oorzaken": [
-            "S1 en/of S2 sensor defect"
-          ],
-          "controlepunten": [
-            "Controleer beide sensoren",
-            "Vervang defecte sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer sensoren",
-              "omschrijving": "Inspecteer beide sensoren (S1 en S2) op beschadigingen of vervuiling."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang de defecte sensor met een origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang de defecte sensor S1 en/of S2",
-          "installateur": "Vervang sensoren altijd correct; incorrect gemonteerde sensoren kunnen ernstige schade veroorzaken",
-          "veiligheid": null
-        },
         "2": {
           "code": "2",
           "beschrijving": "Verwisseling S1 en S2 sensors",
-          "ernst": "hoog",
           "oorzaken": [
             "Sensoren omgewisseld",
             "Slechte kabelverbinding"
@@ -191,7 +117,6 @@
         "4": {
           "code": "4",
           "beschrijving": "Geen vlamsignaal",
-          "ernst": "hoog",
           "oorzaken": [
             "Gaskraan dicht",
             "Gasvoordruk te laag",
@@ -229,7 +154,6 @@
         "5": {
           "code": "5",
           "beschrijving": "Slecht vlamsignaal",
-          "ernst": "hoog",
           "oorzaken": [
             "Condensafvoer verstopt",
             "Gasdruk te laag",
@@ -267,7 +191,6 @@
         "6": {
           "code": "6",
           "beschrijving": "Vlam detectie fout",
-          "ernst": "hoog",
           "oorzaken": [
             "Ontsteekkabel defect",
             "Ontsteekunit defect",
@@ -295,7 +218,6 @@
         "8": {
           "code": "8",
           "beschrijving": "Ventilatortoerental niet juist",
-          "ernst": "hoog",
           "oorzaken": [
             "Ventilator tegen isolatie",
             "Bedrading ventilator",
@@ -328,7 +250,6 @@
         "10": {
           "code": "10",
           "beschrijving": "Sensorfout S1",
-          "ernst": "hoog",
           "oorzaken": [
             "Lucht in installatie",
             "Slechte sensorbevestiging",
@@ -382,7 +303,6 @@
         "20": {
           "code": "20",
           "beschrijving": "Sensorfout S2",
-          "ernst": "hoog",
           "oorzaken": [
             "Breuken in bedrading",
             "Sensor defect"
@@ -421,10 +341,52 @@
           "code": "24",
           "alias": "20"
         },
+        "26": {
+          "code": "26",
+          "beschrijving": "Aansteekbeveiliging – vlam valt weg na ontsteking",
+          "oorzaken": [
+            "Gasdruk te laag of gastoevoer onderbroken",
+            "Elektrode vervuild of verkeerd ingesteld",
+            "Ionisatiesensor defect of slechte verbinding",
+            "Warmtewisselaar vervuild",
+            "Luchtoverschot door verstopte brander"
+          ],
+          "controlepunten": [
+            "Controleer gasafsluiter",
+            "Meet gasdruk",
+            "Inspecteer en reinig elektrode",
+            "Meet ionisatiestroom",
+            "Controleer verbrandingsluchttoevoer"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset de foutcode",
+              "omschrijving": "Druk op de resetknop op het bedieningspaneel. Kijk of de ketel opnieuw probeert aan te slaan."
+            },
+            {
+              "titel": "Controleer gastoevoer",
+              "omschrijving": "Verifieer dat de hoofdgasafsluiter en ketelgasafsluiter volledig open zijn."
+            },
+            {
+              "titel": "Meet de gasdruk",
+              "omschrijving": "Sluit manometer aan op testpunt. Statische druk: 25 mbar. Dynamische druk bij vollast: min. 18 mbar."
+            },
+            {
+              "titel": "Reinig de elektrode",
+              "omschrijving": "Demonteer elektrode. Reinig met fijn schuurpapier. Controleer afslagafstand: 3 mm ±0,5 mm."
+            },
+            {
+              "titel": "Controleer ionisatiekabel",
+              "omschrijving": "Meet weerstand van ionisatiekabel (max. 5 kΩ). Controleer stekkerverbinding op PCB."
+            }
+          ],
+          "vervanging": "Vervang elektrode als afslagafstand niet instelbaar is. Vervang ionisatiekabel bij weerstand > 5 kΩ.",
+          "installateur": "Schakel erkend installateur in als gasdruk buiten specificatie valt",
+          "veiligheid": "Schakel gastoevoer nooit handmatig open als gaslucht waarneembaar is. Ventileer ruimte en bel netbeheerder."
+        },
         "27": {
           "code": "27",
           "beschrijving": "Kortsluiting buitenvoeler",
-          "ernst": "hoog",
           "oorzaken": [
             "Bedrading buitenvoeler defect",
             "Buitenvoeler defect",
@@ -456,7 +418,6 @@
         "29": {
           "code": "29",
           "beschrijving": "Gasklep relais defect",
-          "ernst": "hoog",
           "oorzaken": [
             "Branderautomaat defect"
           ],
@@ -476,6 +437,32 @@
         "30": {
           "code": "30",
           "alias": "29"
+        },
+        "ce": {
+          "code": "CE",
+          "beschrijving": "Communicatiefout tussen ketel en regelaar",
+          "oorzaken": [
+            "Slechte verbinding van de bedrading op de OpenTherm of EMS bus",
+            "Defecte thermostaat of gateway",
+            "Verkeerde parameters ingesteld"
+          ],
+          "controlepunten": [
+            "Controleer de aansluitklemmen van de thermostaat op de ketel",
+            "Test of de ketel normaal functioneert op handmatige instelling"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer aansluitingen",
+              "omschrijving": "Zorg dat de bedrading goed aangedrukt is op de klemmen. Reinig eventueel oxide op de klemmen."
+            },
+            {
+              "titel": "Test zonder thermostaat",
+              "omschrijving": "Koppel de thermostaat los en stel de ketel in op handmatige modus. Als de ketel nu normaal werkt, is het probleem in de thermostaat of bedrading."
+            }
+          ],
+          "vervanging": "Vervang thermostaat of gateway indien defect.",
+          "installateur": "Buscommunicatieproblemen kunnen complex zijn; raadpleeg de fabrikant servicedesk.",
+          "veiligheid": null
         }
       }
     }

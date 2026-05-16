@@ -11,7 +11,6 @@ let state = {
   currentMerk: null,
   currentModel: null,
   currentStoring: null,
-  modelFilterErnst: 'alle',
   merkTableRows: []
 };
 
@@ -72,7 +71,6 @@ function renderMerkTable(rows) {
       <td><span class="code-badge">${codeLabel}</span></td>
       <td style="color:var(--c-text2);font-size:13px">${modelNaam}</td>
       <td style="color:var(--c-text)">${s.beschrijving}</td>
-      <td><span class="ernst-badge ernst-${s.ernst}">${s.ernst}</span></td>
     `;
     tr.onclick = () => openStoring(state.currentMerk, modelKey, code);
     tbody.appendChild(tr);
@@ -108,10 +106,6 @@ function openModel(merkKey, modelKey) {
   document.getElementById('model-title').textContent = model.naam;
   document.getElementById('model-desc').textContent = model.info;
 
-  state.modelFilterErnst = 'alle';
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.filter-btn').classList.add('active');
-
   renderModelTable();
   showPage('model');
 }
@@ -122,24 +116,15 @@ function renderModelTable() {
   const tbody = document.getElementById('model-table-body');
   tbody.innerHTML = '';
   buildGroupedStoringen(merk, model, state.currentModel).forEach(({ codeLabel, code, s }) => {
-    if (state.modelFilterErnst !== 'alle' && s.ernst !== state.modelFilterErnst) return;
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><span class="code-badge">${codeLabel}</span></td>
       <td style="color:var(--c-text)">${s.beschrijving}</td>
-      <td><span class="ernst-badge ernst-${s.ernst}">${s.ernst}</span></td>
       <td style="color:var(--c-text3);font-size:12px">Bekijken →</td>
     `;
     tr.onclick = () => openStoring(state.currentMerk, state.currentModel, code);
     tbody.appendChild(tr);
   });
-}
-
-function filterModel(ernst, btn) {
-  state.modelFilterErnst = ernst;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderModelTable();
 }
 
 function getStoring(merk, code) {
@@ -225,7 +210,6 @@ function openStoring(merkKey, modelKey, code) {
   document.getElementById('storing-meta-row').innerHTML = `
     <span class="meta-chip">${merk.naam}</span>
     <span class="meta-chip">${model.naam}</span>
-    <span class="ernst-badge ernst-${s.ernst}" style="margin-left:4px">${s.ernst} risico</span>
   `;
 
   const body = document.getElementById('storing-body');
@@ -304,8 +288,7 @@ function buildSearchIndex() {
           merkKey, modelKey,
           code,
           beschrijving: s.beschrijving,
-          label: `${merk.naam} ${model.naam}`,
-          ernst: s.ernst
+          label: `${merk.naam} ${model.naam}`
         });
       });
     });
@@ -409,7 +392,6 @@ function renderPopularGrid() {
         <div class="pop-merk">${merk.naam} · ${model.naam}</div>
         <div class="pop-desc">${s.beschrijving}</div>
       </div>
-      <span class="ernst-badge ernst-${s.ernst}">${s.ernst}</span>
     `;
     div.onclick = () => openStoring(merkKey, modelKey, code);
     container.appendChild(div);

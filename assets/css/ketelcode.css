@@ -351,17 +351,6 @@ nav {
   white-space: nowrap;
   display: inline-block;
 }
-.ernst-badge {
-  font-size: 11px;
-  font-family: var(--font-mono);
-  padding: 2px 8px;
-  border-radius: 3px;
-  white-space: nowrap;
-  display: inline-block;
-}
-.ernst-hoog { background: var(--c-red-dim); color: var(--c-red); }
-.ernst-middel { background: var(--c-amber-dim); color: var(--c-amber); }
-.ernst-laag { background: var(--c-green-dim); color: var(--c-green); }
 .table-wrap {
   background: var(--c-bg2);
   border: 1px solid var(--c-border);
@@ -611,30 +600,6 @@ nav {
 }
 .kb-card h3 { font-size: 15px; font-weight: 500; color: var(--c-text); margin-bottom: 0.4rem; }
 .kb-card p { font-size: 13.5px; color: var(--c-text2); line-height: 1.5; }
-
-/* ── FILTER BAR ── */
-.filter-bar {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.25rem;
-}
-.filter-btn {
-  font-size: 12.5px;
-  font-family: var(--font-mono);
-  background: var(--c-bg3);
-  border: 1px solid var(--c-border);
-  color: var(--c-text2);
-  padding: 4px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.1s;
-}
-.filter-btn:hover, .filter-btn.active {
-  background: var(--c-accent-dim);
-  border-color: var(--c-accent);
-  color: var(--c-accent);
-}
 
 /* ── BACK BUTTON ── */
 .back-btn {
