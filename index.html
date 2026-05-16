@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ketelcode – Technisch Kennisplatform voor Installateurs</title>
+<meta name="description" content="Professioneel kennisplatform voor cv-ketel storingscodes. Zoek per merk, model en storingscode. Voor installateurs en monteurs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/ketelcode.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo" onclick="showPage('home')">Ketelcode</div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" id="nav-home" onclick="showPage('home');return false;">Home</a></li>
+      <li><a href="#" id="nav-merken" onclick="showPage('merken');return false;">Merken</a></li>
+      <li><a href="#" id="nav-kennisbank" onclick="showPage('kennisbank');return false;">Kennisbank</a></li>
+      <li>
+        <button onclick="alert('Categorieën: CV-ketels (actief). Ventilatie en warmtepompen volgen.')">
+          Categorieën <span class="nav-badge">2 binnenkort</span>
+        </button>
+      </li>
+      <li><a href="#" id="nav-contact" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="admin/index.html" target="_blank" rel="noopener">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Technisch kennisplatform · CV-ketels</div>
+    <h1>Storingscode opzoeken<br><strong>Merk, model en oplossing</strong></h1>
+    <p class="hero-sub">Voor installateurs en monteurs. Vind de juiste diagnose en oplossing binnen twee klikken.</p>
+
+    <div class="search-bar-wrap">
+      <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="hero-search" class="search-bar" type="search" placeholder="Zoek op merk, model of storingscode — bijv. 'Intergas 26' of 'E5'" autocomplete="off" oninput="handleSearch(this.value)" onfocus="handleSearch(this.value)">
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+    <div class="quick-tags" id="hero-quick-tags"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Merken</div>
+        <span class="section-link" onclick="showPage('merken')">Alle merken →</span>
+      </div>
+      <div class="brand-grid" id="home-brand-grid"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Populaire storingen</div>
+        <span class="section-link" onclick="showPage('merken')">Alle storingen →</span>
+      </div>
+      <div class="popular-grid" id="popular-grid"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Categorieën</div>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card active" onclick="showPage('merken')">
+          <div class="cat-icon">🔥</div>
+          <div class="cat-name">CV-ketels</div>
+          <div class="cat-desc">Storingscodes, diagnoses en oplossingen</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">💨</div>
+          <div class="cat-name">Ventilatie <span class="soon-badge">binnenkort</span></div>
+          <div class="cat-desc">WTW-units, mechanische ventilatie</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">♨️</div>
+          <div class="cat-name">Warmtepompen <span class="soon-badge">binnenkort</span></div>
+          <div class="cat-desc">Lucht/water, bodem, hybride systemen</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🚿</div>
+          <div class="cat-name">Boilers <span class="soon-badge">binnenkort</span></div>
+          <div class="cat-desc">Boiler storingen en onderhoud</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Kennisbank</div>
+        <span class="section-link" onclick="showPage('kennisbank')">Alle artikelen →</span>
+      </div>
+      <div class="kb-grid" id="home-kb-preview"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: MERKEN OVERZICHT
+═══════════════════════════════════════ -->
+<div id="page-merken" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <span onclick="showPage('home')">Home</span>
+        <span class="sep">›</span>
+        <span class="current">Merken</span>
+      </div>
+      <h1>CV-ketel merken</h1>
+      <p>Selecteer een merk om modellen en storingscodes te bekijken.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="brand-grid" id="merken-brand-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: MERK
+═══════════════════════════════════════ -->
+<div id="page-merk" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb" id="merk-breadcrumb"></div>
+      <h1 id="merk-title"></h1>
+      <p id="merk-desc"></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Modellen</div>
+      </div>
+      <div class="models-grid" id="models-grid"></div>
+    </div>
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Alle storingen – <span id="merk-name-inline"></span></div>
+      </div>
+      <input class="table-search" type="search" id="merk-table-search" placeholder="Filter op code of beschrijving…" oninput="filterMerkTable(this.value)">
+      <div class="table-wrap">
+        <table class="storingen-table" id="merk-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Model</th>
+              <th>Beschrijving</th>
+              <th>Ernst</th>
+            </tr>
+          </thead>
+          <tbody id="merk-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: MODEL
+═══════════════════════════════════════ -->
+<div id="page-model" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb" id="model-breadcrumb"></div>
+      <h1 id="model-title"></h1>
+      <p id="model-desc"></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="filter-bar" id="model-filter-bar">
+        <button class="filter-btn active" onclick="filterModel('alle',this)">Alle</button>
+        <button class="filter-btn" onclick="filterModel('hoog',this)">🔴 Hoog</button>
+        <button class="filter-btn" onclick="filterModel('middel',this)">🟡 Middel</button>
+        <button class="filter-btn" onclick="filterModel('laag',this)">🟢 Laag</button>
+      </div>
+      <div class="table-wrap">
+        <table class="storingen-table" id="model-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Beschrijving</th>
+              <th>Ernst</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="model-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: STORING DETAIL
+═══════════════════════════════════════ -->
+<div id="page-storing" class="page">
+  <div class="storing-header">
+    <div class="container--narrow">
+      <div class="breadcrumb" id="storing-breadcrumb"></div>
+      <div class="storing-title-row">
+        <div class="storing-code-big" id="storing-code-display"></div>
+        <div class="storing-title-info">
+          <h1 id="storing-h1"></h1>
+          <div class="storing-meta-row" id="storing-meta-row"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container--narrow" style="padding-top:2.5rem; padding-bottom:4rem;">
+    <div id="storing-body"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: KENNISBANK
+═══════════════════════════════════════ -->
+<div id="page-kennisbank" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <span onclick="showPage('home')">Home</span>
+        <span class="sep">›</span>
+        <span class="current">Kennisbank</span>
+      </div>
+      <h1>Kennisbank</h1>
+      <p>Technische artikelen, onderhoudstips en achtergrondinfo voor installateurs.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="kb-grid" id="kennisbank-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <span onclick="showPage('home')">Home</span>
+        <span class="sep">›</span>
+        <span class="current">Contact</span>
+      </div>
+      <h1>Contact</h1>
+      <p>Feedback, foutmeldingen of een ontbrekende storing doorgeven?</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="info-grid" style="max-width:700px">
+        <div class="info-block">
+          <div class="info-block-title"><span class="dot dot-blue"></span>Storing melden of aanvullen</div>
+          <p style="font-size:14px;color:var(--c-text2);line-height:1.6">Staat uw merk, model of storingscode er nog niet bij? Stuur ons de details en we voegen het toe aan de database.</p>
+          <p style="font-size:13px;color:var(--c-text3);margin-top:0.75rem;font-family:var(--font-mono)">info@ketelcode.nl</p>
+        </div>
+        <div class="info-block">
+          <div class="info-block-title"><span class="dot dot-amber"></span>Fout gevonden?</div>
+          <p style="font-size:14px;color:var(--c-text2);line-height:1.6">Klopt een oorzaak of oplossing niet? Meld het via onderstaand e-mailadres met de storingscode en het correcte advies.</p>
+          <p style="font-size:13px;color:var(--c-text3);margin-top:0.75rem;font-family:var(--font-mono)">redactie@ketelcode.nl</p>
+        </div>
+        <div class="info-block" style="grid-column:1/-1">
+          <div class="info-block-title"><span class="dot dot-accent"></span>Disclaimer</div>
+          <p style="font-size:13.5px;color:var(--c-text2);line-height:1.6">De informatie op dit platform is bedoeld als technische ondersteuning voor vakbekwame installateurs. Aan de inhoud kunnen geen rechten worden ontleend. Werkzaamheden aan gastoestellen mogen uitsluitend worden uitgevoerd door gecertificeerde installateurs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ketelcode</div>
+      <p class="footer-desc">Technisch kennisplatform voor installateurs en monteurs. Storingscodes, diagnoses en oplossingen voor cv-ketels.</p>
+    </div>
+    <div class="footer-col">
+      <h4>CV-Ketels</h4>
+      <ul>
+        <li onclick="openMerk('intergas')">Intergas</li>
+        <li onclick="openMerk('remeha')">Remeha</li>
+        <li onclick="openMerk('nefit')">Nefit</li>
+        <li onclick="openMerk('vaillant')">Vaillant</li>
+        <li onclick="showPage('merken')">Alle merken →</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categorieën</h4>
+      <ul>
+        <li onclick="showPage('merken')">CV-ketels</li>
+        <li>Ventilatie <span class="soon-badge">binnenkort</span></li>
+        <li>Warmtepompen <span class="soon-badge">binnenkort</span></li>
+        <li>Boilers <span class="soon-badge">binnenkort</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Platform</h4>
+      <ul>
+        <li onclick="showPage('kennisbank')">Kennisbank</li>
+        <li onclick="showPage('contact')">Contact</li>
+        <li onclick="showPage('contact')">Storing melden</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Ketelcode – Uitsluitend voor vakbekwame installateurs</span>
+    <span>Disclaimer · Privacy</span>
+  </div>
+</footer>
+
+<script src="assets/js/ketelcode.js"></script>
+</body>
+</html>

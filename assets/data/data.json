@@ -1,0 +1,562 @@
+{
+  "merken": {
+    "intergas": {
+      "naam": "Intergas",
+      "kleur": "#e05c1e",
+      "beschrijving": "Intergas is een Nederlands merk, bekend om de compacte Kombi Kompakt en HRE-serie. De ketels hebben een eenvoudige constructie met weinig onderdelen.",
+      "modellen": {
+        "HRE": {
+          "naam": "HRE (alle vermogens)",
+          "info": "",
+          "storingen": [
+            "0",
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "27",
+            "29",
+            "30",
+            "26"
+          ]
+        }
+      },
+      "storingen": {
+        "1": {
+          "code": "1",
+          "beschrijving": "Temperatuur te hoog",
+          "ernst": "laag",
+          "oorzaken": [
+            "Lucht in installatie",
+            "Pomp draait niet",
+            "Te weinig doorstroming in installatie"
+          ],
+          "controlepunten": [
+            "Ontlucht ketel en cv-installatie",
+            "Controleer bedrading pomp",
+            "Controleer pompstand en radiatorafsluiters"
+          ],
+          "stappen": [
+            {
+              "titel": "Ontlucht de installatie",
+              "omschrijving": "Draai de ontluchter op de ketel open tot dat er water uit komt"
+            },
+            {
+              "titel": "Controleer bedrading",
+              "omschrijving": "Kijk of er spanning op de stekker vanaf elektronica naar pomp staat en of deze stekker is aangesloten."
+            },
+            {
+              "titel": "Installatie controleren",
+              "omschrijving": "Zorg dat er minimaal 2 radiatoren open staan en dat de pompstand hoog genoeg staat."
+            }
+          ],
+          "vervanging": null,
+          "installateur": null,
+          "veiligheid": null
+        },
+        "26": {
+          "code": "26",
+          "beschrijving": "Aansteekbeveiliging – vlam valt weg na ontsteking",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasdruk te laag of gastoevoer onderbroken",
+            "Elektrode vervuild of verkeerd ingesteld",
+            "Ionisatiesensor defect of slechte verbinding",
+            "Warmtewisselaar vervuild",
+            "Luchtoverschot door verstopte brander"
+          ],
+          "controlepunten": [
+            "Controleer gasafsluiter",
+            "Meet gasdruk",
+            "Inspecteer en reinig elektrode",
+            "Meet ionisatiestroom",
+            "Controleer verbrandingsluchttoevoer"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset de foutcode",
+              "omschrijving": "Druk op de resetknop op het bedieningspaneel. Kijk of de ketel opnieuw probeert aan te slaan."
+            },
+            {
+              "titel": "Controleer gastoevoer",
+              "omschrijving": "Verifieer dat de hoofdgasafsluiter en ketelgasafsluiter volledig open zijn."
+            },
+            {
+              "titel": "Meet de gasdruk",
+              "omschrijving": "Sluit manometer aan op testpunt. Statische druk: 25 mbar. Dynamische druk bij vollast: min. 18 mbar."
+            },
+            {
+              "titel": "Reinig de elektrode",
+              "omschrijving": "Demonteer elektrode. Reinig met fijn schuurpapier. Controleer afslagafstand: 3 mm ±0,5 mm."
+            },
+            {
+              "titel": "Controleer ionisatiekabel",
+              "omschrijving": "Meet weerstand van ionisatiekabel (max. 5 kΩ). Controleer stekkerverbinding op PCB."
+            }
+          ],
+          "vervanging": "Vervang elektrode als afslagafstand niet instelbaar is. Vervang ionisatiekabel bij weerstand > 5 kΩ.",
+          "installateur": "Schakel erkend installateur in als gasdruk buiten specificatie valt",
+          "veiligheid": "Schakel gastoevoer nooit handmatig open als gaslucht waarneembaar is. Ventileer ruimte en bel netbeheerder."
+        },
+        "ce": {
+          "code": "CE",
+          "beschrijving": "Communicatiefout tussen ketel en regelaar",
+          "ernst": "laag",
+          "oorzaken": [
+            "Slechte verbinding van de bedrading op de OpenTherm of EMS bus",
+            "Defecte thermostaat of gateway",
+            "Verkeerde parameters ingesteld"
+          ],
+          "controlepunten": [
+            "Controleer de aansluitklemmen van de thermostaat op de ketel",
+            "Test of de ketel normaal functioneert op handmatige instelling"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer aansluitingen",
+              "omschrijving": "Zorg dat de bedrading goed aangedrukt is op de klemmen. Reinig eventueel oxide op de klemmen."
+            },
+            {
+              "titel": "Test zonder thermostaat",
+              "omschrijving": "Koppel de thermostaat los en stel de ketel in op handmatige modus. Als de ketel nu normaal werkt, is het probleem in de thermostaat of bedrading."
+            }
+          ],
+          "vervanging": "Vervang thermostaat of gateway indien defect.",
+          "installateur": "Buscommunicatieproblemen kunnen complex zijn; raadpleeg de fabrikant servicedesk.",
+          "veiligheid": null
+        },
+        "0": {
+          "code": "0",
+          "beschrijving": "Sensorfout na zelfcontrole",
+          "ernst": "hoog",
+          "oorzaken": [
+            "S1 en/of S2 sensor defect"
+          ],
+          "controlepunten": [
+            "Controleer beide sensoren",
+            "Vervang defecte sensor"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer sensoren",
+              "omschrijving": "Inspecteer beide sensoren (S1 en S2) op beschadigingen of vervuiling."
+            },
+            {
+              "titel": "Vervang sensor",
+              "omschrijving": "Vervang de defecte sensor met een origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang de defecte sensor S1 en/of S2",
+          "installateur": "Vervang sensoren altijd correct; incorrect gemonteerde sensoren kunnen ernstige schade veroorzaken",
+          "veiligheid": null
+        },
+        "2": {
+          "code": "2",
+          "beschrijving": "Verwisseling S1 en S2 sensors",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Sensoren omgewisseld",
+            "Slechte kabelverbinding"
+          ],
+          "controlepunten": [
+            "Controleer sensor positie",
+            "Controleer kabelboom"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer sensorkabel",
+              "omschrijving": "Verifieer dat de sensorkabels correct zijn aangesloten. S1 op de warmwaterbuis, S2 op retour."
+            },
+            {
+              "titel": "Inspecteer kabelboom",
+              "omschrijving": "Controleer de kabelboom tussen sensoren en branderautomaat op beschadigingen."
+            }
+          ],
+          "vervanging": "Vervang S1 of S2 als beschadigd",
+          "installateur": "Bel een erkend installateur als probleem aanhoudt",
+          "veiligheid": null
+        },
+        "4": {
+          "code": "4",
+          "beschrijving": "Geen vlamsignaal",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gaskraan dicht",
+            "Gasvoordruk te laag",
+            "Ontsteeking defect",
+            "Geen massa"
+          ],
+          "controlepunten": [
+            "Controleer gasafsluiter",
+            "Meet gasdruk",
+            "Controleer elektrode en ontsteeking",
+            "Controleer aarding"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset de ketel",
+              "omschrijving": "Zet de ketel uit en terug aan. Druk op de resetknop."
+            },
+            {
+              "titel": "Controleer gastoevoer",
+              "omschrijving": "Verifieer dat de gasafsluiters open zijn. Test gastoevoer aan andere toestellen."
+            },
+            {
+              "titel": "Meet gasdruk",
+              "omschrijving": "Gasdruk moet minimaal 20 mbar zijn. Meet op het testpunt van de ketel."
+            },
+            {
+              "titel": "Inspecteer elektrode",
+              "omschrijving": "Controleer elektrode op vervuiling en afslagafstand (3-4 mm)."
+            }
+          ],
+          "vervanging": "Vervang ontsteekkabel, bougiedop of ontsteekunit indien nodig",
+          "installateur": "Bel erkend installateur als gasdruk buiten spec is",
+          "veiligheid": "Nooit handmatig gastoevoer openen als gaslucht waarneembaar is"
+        },
+        "5": {
+          "code": "5",
+          "beschrijving": "Slecht vlamsignaal",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Condensafvoer verstopt",
+            "Gasdruk te laag",
+            "Elektrode vervuild",
+            "Aarding probleem"
+          ],
+          "controlepunten": [
+            "Controleer condensafvoer",
+            "Meet gasdruk",
+            "Inspecteer elektrode",
+            "Controleer aarding"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer condensafvoer",
+              "omschrijving": "Verifieer dat de condensafvoer vrij is en goed loopt."
+            },
+            {
+              "titel": "Meet gasdruk",
+              "omschrijving": "Gasdruk moet minimaal 20 mbar zijn. Meet op het testpunt."
+            },
+            {
+              "titel": "Reinig elektrode",
+              "omschrijving": "Demonteer en reinig de elektrode. Controleer afslagafstand op 3 mm."
+            },
+            {
+              "titel": "Controleer aarding",
+              "omschrijving": "Verifieer dat aarding van de ketel correct is aangesloten."
+            }
+          ],
+          "vervanging": "Vervang elektrode of ontsteekkabel indien beschadigd",
+          "installateur": "Bel erkend installateur als probleem aanhoudt",
+          "veiligheid": null
+        },
+        "6": {
+          "code": "6",
+          "beschrijving": "Vlam detectie fout",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Ontsteekkabel defect",
+            "Ontsteekunit defect",
+            "Branderautomaat defect"
+          ],
+          "controlepunten": [
+            "Inspecteer ontsteekkabel",
+            "Test ontsteekunit",
+            "Controleer branderautomaat"
+          ],
+          "stappen": [
+            {
+              "titel": "Inspecteer ontsteekkabel",
+              "omschrijving": "Controleer ontsteekkabel op zichtbare beschadigingen of afbreuken."
+            },
+            {
+              "titel": "Vervang ontsteekkabel",
+              "omschrijving": "Vervang de ontsteekkabel + bougiedop met origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang ontsteekkabel + bougiedop of ontsteekunit",
+          "installateur": "Raadpleeg servicedesk als probleem na vervanging aanhoudt",
+          "veiligheid": null
+        },
+        "8": {
+          "code": "8",
+          "beschrijving": "Ventilatortoerental niet juist",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Ventilator tegen isolatie",
+            "Bedrading ventilator",
+            "Slecht contactpunt draad",
+            "Ventilator defect"
+          ],
+          "controlepunten": [
+            "Inspecteer ventilatorbehuizing",
+            "Controleer bedrading",
+            "Test contactpunten"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer ventilatorbehuizing",
+              "omschrijving": "Verifieer dat de ventilator vrij kan draaien zonder tegen isolatie aan te lopen."
+            },
+            {
+              "titel": "Inspecteer bedrading",
+              "omschrijving": "Controleer bedrading op slecht contact of beschadigingen."
+            },
+            {
+              "titel": "Test en vervang ventilator",
+              "omschrijving": "Test ventilator; vervang indien nodig met origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang ventilator of branderautomaat",
+          "installateur": "Raadpleeg servicedesk voor diagnose",
+          "veiligheid": null
+        },
+        "10": {
+          "code": "10",
+          "beschrijving": "Sensorfout S1",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Lucht in installatie",
+            "Slechte sensorbevestiging",
+            "Breuken in bedrading",
+            "Sensor defect"
+          ],
+          "controlepunten": [
+            "Ontlucht installatie",
+            "Controleer sensorbevestiging",
+            "Inspecteer bedrading",
+            "Test sensor"
+          ],
+          "stappen": [
+            {
+              "titel": "Ontlucht installatie",
+              "omschrijving": "Draai de ontluchter op de ketel open tot water stroomt."
+            },
+            {
+              "titel": "Controleer sensorbevestiging",
+              "omschrijving": "Verifieer dat de S1 sensor goed is bevestigd op de warmwaterbuis."
+            },
+            {
+              "titel": "Controleer bedrading",
+              "omschrijving": "Inspecteer bedrading op de S1 sensor op breuk of beschadiging."
+            },
+            {
+              "titel": "Vervang sensor",
+              "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang S1 sensor",
+          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
+          "veiligheid": null
+        },
+        "11": {
+          "code": "11",
+          "alias": "10"
+        },
+        "12": {
+          "code": "12",
+          "alias": "10"
+        },
+        "13": {
+          "code": "13",
+          "alias": "10"
+        },
+        "14": {
+          "code": "14",
+          "alias": "10"
+        },
+        "20": {
+          "code": "20",
+          "beschrijving": "Sensorfout S2",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Breuken in bedrading",
+            "Sensor defect"
+          ],
+          "controlepunten": [
+            "Inspecteer bedrading S2",
+            "Test sensor"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer bedrading",
+              "omschrijving": "Inspecteer bedrading op de S2 sensor op breuk of beschadiging."
+            },
+            {
+              "titel": "Vervang sensor",
+              "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang S2 sensor",
+          "installateur": "Zorg dat sensor correct wordt gemonteerd",
+          "veiligheid": null
+        },
+        "21": {
+          "code": "21",
+          "alias": "20"
+        },
+        "22": {
+          "code": "22",
+          "alias": "20"
+        },
+        "23": {
+          "code": "23",
+          "alias": "20"
+        },
+        "24": {
+          "code": "24",
+          "alias": "20"
+        },
+        "27": {
+          "code": "27",
+          "beschrijving": "Kortsluiting buitenvoeler",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Bedrading buitenvoeler defect",
+            "Buitenvoeler defect",
+            "Onjuiste branderautomaat versie"
+          ],
+          "controlepunten": [
+            "Inspecteer buitenvoelerbedrading",
+            "Test buitenvoeler",
+            "Controleer branderautomaat versie"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer buitenvoelerbedrading",
+              "omschrijving": "Inspecteer bedrading van de buitenvoeler op beschadigingen of kortsluiting."
+            },
+            {
+              "titel": "Vervang buitenvoeler",
+              "omschrijving": "Vervang buitenvoeler met origineel Intergas onderdeel."
+            },
+            {
+              "titel": "Controleer branderautomaat",
+              "omschrijving": "Verifieer dat de branderautomaat geschikt is voor deze toepassing."
+            }
+          ],
+          "vervanging": "Vervang buitenvoeler of branderautomaat",
+          "installateur": "Controleer branderautomaat versie; vervang indien onjuist",
+          "veiligheid": null
+        },
+        "29": {
+          "code": "29",
+          "beschrijving": "Gasklep relais defect",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Branderautomaat defect"
+          ],
+          "controlepunten": [
+            "Controleer gasklep relais"
+          ],
+          "stappen": [
+            {
+              "titel": "Vervang branderautomaat",
+              "omschrijving": "Vervang de branderautomaat met origineel Intergas onderdeel."
+            }
+          ],
+          "vervanging": "Vervang branderautomaat",
+          "installateur": "Raadpleeg servicedesk voor origineel onderdeel",
+          "veiligheid": null
+        },
+        "30": {
+          "code": "30",
+          "alias": "29"
+        }
+      }
+    }
+  },
+  "populair": [
+    {
+      "merkKey": "intergas",
+      "modelKey": "hre28",
+      "code": "26"
+    },
+    {
+      "merkKey": "remeha",
+      "modelKey": "avanta",
+      "code": "e5"
+    },
+    {
+      "merkKey": "nefit",
+      "modelKey": "trendline",
+      "code": "6a"
+    },
+    {
+      "merkKey": "vaillant",
+      "modelKey": "ecotec-plus",
+      "code": "f22"
+    },
+    {
+      "merkKey": "vaillant",
+      "modelKey": "ecotec-plus",
+      "code": "f75"
+    },
+    {
+      "merkKey": "intergas",
+      "modelKey": "hre28",
+      "code": "af"
+    },
+    {
+      "merkKey": "remeha",
+      "modelKey": "avanta",
+      "code": "e9"
+    },
+    {
+      "merkKey": "nefit",
+      "modelKey": "trendline",
+      "code": "5"
+    },
+    {
+      "merkKey": "bosch",
+      "modelKey": "condens7000",
+      "code": "a23"
+    }
+  ],
+  "kennisbank": [
+    {
+      "tag": "Onderhoud",
+      "titel": "Jaarlijks CV-ketel onderhoud: wat wordt er gecontroleerd?",
+      "tekst": "Een overzicht van alle punten die een erkend installateur controleert tijdens het jaarlijks onderhoud."
+    },
+    {
+      "tag": "Gasdruk",
+      "titel": "Gasdruk meten aan een cv-ketel: stap voor stap",
+      "tekst": "Hoe sluit je een manometer aan op het testpunt van een gascombi en wat zijn de grenswaarden?"
+    },
+    {
+      "tag": "Ionisatie",
+      "titel": "Ionisatiestroom meten en beoordelen",
+      "tekst": "Waarop let je bij het meten van de ionisatiestroom en wanneer is vervanging van de elektrode noodzakelijk?"
+    },
+    {
+      "tag": "Expansievat",
+      "titel": "Expansievat controleren en vervangen",
+      "tekst": "Wanneer is een expansievat defect, hoe meet je de druk en wanneer is vervanging noodzakelijk?"
+    },
+    {
+      "tag": "OpenTherm",
+      "titel": "OpenTherm en EMS-bus: communicatieprotocollen uitgelegd",
+      "tekst": "Verschil tussen on/off, OpenTherm en EMS-bus, en hoe je communicatiefouten diagnosticeert."
+    },
+    {
+      "tag": "Rookgas",
+      "titel": "Rookgasafvoer en luchttoevoer: materialen en maximalelengtes",
+      "tekst": "Overzicht van toegestane buismaterialen, maximale leidinglengtes en eisen per merk."
+    }
+  ]
+}
