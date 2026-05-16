@@ -1,0 +1,939 @@
+{
+  "merken": {
+    "intergas": {
+      "naam": "Intergas",
+      "kleur": "#e05c1e",
+      "beschrijving": "Intergas is een Nederlands merk, bekend om de compacte Kombi Kompakt en HRE-serie. De ketels hebben een eenvoudige constructie met weinig onderdelen.",
+      "modellen": {
+        "hre28": {
+          "naam": "HRE 28/24",
+          "info": "HR-ketel, 28 kW verwarmingsvermogen, 24 liter tapwatercapaciteit",
+          "storingen": [
+            "26",
+            "28",
+            "h07",
+            "h03",
+            "af"
+          ]
+        },
+        "kombi-kompakt": {
+          "naam": "Kombi Kompakt HRE",
+          "info": "Compacte combiketel, meest verkochte Intergas model",
+          "storingen": [
+            "26",
+            "28",
+            "h07",
+            "ce"
+          ]
+        },
+        "xtreme": {
+          "naam": "Xtreme 36",
+          "info": "Hoog vermogen, geschikt voor grote installaties",
+          "storingen": [
+            "26",
+            "af",
+            "h07",
+            "h03",
+            "28"
+          ]
+        }
+      },
+      "storingen": {
+        "26": {
+          "code": "26",
+          "beschrijving": "Aansteekbeveiliging – vlam valt weg na ontsteking",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasdruk te laag of gastoevoer onderbroken",
+            "Elektrode vervuild of verkeerd ingesteld (afslagafstand)",
+            "Ionisatiesensor defect of slechte verbinding",
+            "Warmtewisselaar vervuild (kalkafzetting)",
+            "Luchtoverschot door verstopte brander"
+          ],
+          "controlepunten": [
+            "Controleer of de gasafsluiter open staat",
+            "Meet de gasdruk op het toestel (min. 20 mbar, max. 25 mbar)",
+            "Inspecteer en reinig de elektrode – controleer de afslagafstand (3–4 mm)",
+            "Meet de ionisatiestroom (min. 1,5 µA DC)",
+            "Controleer de verbrandingsluchttoevoer op blokkades"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset de foutcode",
+              "omschrijving": "Druk op de resetknop op het bedieningspaneel. Kijk of de ketel opnieuw probeert aan te slaan."
+            },
+            {
+              "titel": "Controleer gastoevoer",
+              "omschrijving": "Verifieer dat de hoofdgasafsluiter en de ketelgasafsluiter volledig open zijn. Controleer bij andere gasapparaten in het pand of deze normaal werken."
+            },
+            {
+              "titel": "Meet de gasdruk",
+              "omschrijving": "Sluit een manometer aan op de testpunt van de gascombi. Statische druk: 25 mbar. Dynamische druk bij vollast: minimaal 18 mbar."
+            },
+            {
+              "titel": "Reinig de elektrode",
+              "omschrijving": "Demonteer de elektrode. Reinig met fijn schuurpapier. Controleer de afslagafstand: 3 mm ±0,5 mm. Controleer de elektrode op haarscheurtjes."
+            },
+            {
+              "titel": "Controleer ionisatiekabel",
+              "omschrijving": "Meet de weerstand van de ionisatiekabel (max. 5 kΩ). Controleer de stekkerverbinding op de PCB."
+            }
+          ],
+          "vervanging": "Vervang de elektrode als de afslagafstand niet meer instelbaar is of als er beschadigingen zichtbaar zijn. Vervang de ionisatiekabel bij weerstand > 5 kΩ.",
+          "installateur": "Schakel een erkend installateur in als de gasdruk buiten specificatie valt of als na bovenstaande stappen de fout aanhoudt. Gasdrukproblemen vereisen een gecertificeerd installateur.",
+          "veiligheid": "Schakel de gastoevoer nooit handmatig open als er een gaslucht waarneembaar is. Ventileer de ruimte en bel de netbeheerder."
+        },
+        "28": {
+          "code": "28",
+          "beschrijving": "Vlam uitgevallen tijdens bedrijf (flame loss during operation)",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasdrukfluctuaties tijdens bedrijf",
+            "Vervuilde brander of warmtewisselaar",
+            "Defecte gaskraan (begint te lekken bij druk)",
+            "Ionisatiestroom valt weg door vervuiling"
+          ],
+          "controlepunten": [
+            "Meet gasdruk bij vollast (niet alleen statisch)",
+            "Visuele inspectie brander op roet of beschadiging",
+            "Controleer alle kabels op de PCB op losse verbindingen"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset en observeer",
+              "omschrijving": "Reset de ketel en observeer tijdens de opstart. Noteer of de vlam wél aanslaat maar daarna uitvalt."
+            },
+            {
+              "titel": "Controleer gasdruk bij last",
+              "omschrijving": "Meet de gasdruk terwijl de ketel op vollast draait. De druk mag niet meer dan 3 mbar zakken ten opzichte van de statische druk."
+            },
+            {
+              "titel": "Inspecteer de brander",
+              "omschrijving": "Reinig de brander met perslucht. Controleer de brandervlakken op beschadiging of roetaanslag."
+            }
+          ],
+          "vervanging": "Overweeg vervanging van de gaskraan als de drukval > 5 mbar bij vollast.",
+          "installateur": "Laat de gaskraan vervangen door een erkend installateur.",
+          "veiligheid": "Nooit de beveiliging overbruggen of de ketel vastgezet laten met een reset-tool."
+        },
+        "h07": {
+          "code": "H07",
+          "beschrijving": "Warmwatersensor buiten bereik / tapwatertemperatuur te hoog",
+          "ernst": "middel",
+          "oorzaken": [
+            "NTC-sensor tapwater defect of losgeraakt",
+            "Kalkafzetting in de warmtewisselaar",
+            "Thermostaatinstelling te hoog ingesteld"
+          ],
+          "controlepunten": [
+            "Meet weerstand NTC-sensor (25°C = 10 kΩ)",
+            "Controleer stekkerverbinding op de sensor",
+            "Check instelwaarde maximale tapwatertemperatuur"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer NTC-sensor",
+              "omschrijving": "Verwijder de sensor en meet de weerstand. Bij 25°C moet dit ±10 kΩ zijn. Bij afwijking > 10%: sensor vervangen."
+            },
+            {
+              "titel": "Ontkalken",
+              "omschrijving": "Als de sensor OK is, overweeg dan een ontkalking van de warmtewisselaar tapwater bij een ketel ouder dan 5 jaar."
+            }
+          ],
+          "vervanging": "Vervang NTC-sensor bij afwijkende weerstandswaarde.",
+          "installateur": "Ontkalken kan door een vakbekwaam installateur worden uitgevoerd.",
+          "veiligheid": null
+        },
+        "h03": {
+          "code": "H03",
+          "beschrijving": "CV-aanvoersensor buiten bereik",
+          "ernst": "middel",
+          "oorzaken": [
+            "NTC-sensor CV-aanvoer defect",
+            "Kortsluiting in de sensorbedrading",
+            "PCB-probleem"
+          ],
+          "controlepunten": [
+            "Meet weerstand NTC (25°C = 10 kΩ)",
+            "Controleer de bedrading op beschadiging"
+          ],
+          "stappen": [
+            {
+              "titel": "Meet de NTC-sensor",
+              "omschrijving": "Demonteer de sensor, meet bij bekende temperatuur de weerstand en vergelijk met de karakteristiek."
+            },
+            {
+              "titel": "Controleer bedrading",
+              "omschrijving": "Controleer de gehele sensorleiding op knikken, beschadigingen of vochtindringing."
+            }
+          ],
+          "vervanging": "Vervang sensor bij afwijking. Als na sensorvervanging de fout aanhoudt: PCB controleren.",
+          "installateur": "PCB-vervanging door erkend servicemonteur.",
+          "veiligheid": null
+        },
+        "af": {
+          "code": "AF",
+          "beschrijving": "Afvoersensor hoge temperatuur – rookgasbeveiliging actief",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Verstopte rookgasafvoer of luchttoevoer",
+            "Terugslag van rookgas (ongunstige druk buitenomgeving)",
+            "Defecte afvoertemperatuursensor",
+            "Warmtewisselaar sterk vervuild"
+          ],
+          "controlepunten": [
+            "Visuele inspectie rookgasafvoerpijp op verstoppingen, vogelnesten, etc.",
+            "Controleer of de toevoerluchtleiding niet geblokkeerd is",
+            "Meet de rookgastemperatuur met flue gas analyser"
+          ],
+          "stappen": [
+            {
+              "titel": "Inspecteer de rookgasafvoer",
+              "omschrijving": "Controleer de uitmonding aan de gevel of het dak op blokkades. Let op vogelschade, ijsvorming in de winter, of neergeslagen condens."
+            },
+            {
+              "titel": "Controleer de luchttoevoer",
+              "omschrijving": "Bij een gesloten systeem: zorg dat de toevoerbuis onbelemmerd is. Controleer of de buis correct is aangesloten (concentrischer systeem niet omgekeerd)."
+            },
+            {
+              "titel": "Meet de afvoertemperatuur",
+              "omschrijving": "Als beide OK zijn, meet dan de afvoertemperatuur bij vollast. Boven 120°C wijst op een sterk vervuilde warmtewisselaar."
+            }
+          ],
+          "vervanging": "Overweeg reiniging of vervanging van de warmtewisselaar bij hoge rookgastemperatuur.",
+          "installateur": "Rookgasafvoerproblemen en warmtewisselaarsvervanging door erkend installateur.",
+          "veiligheid": "Bij aanhoudende rookgasbeveiliging: ketel buiten bedrijf stellen totdat de oorzaak is gevonden. Rookgaslekkage in de woonruimte is levensgevaarlijk (CO-risico)."
+        },
+        "ce": {
+          "code": "CE",
+          "beschrijving": "Communicatiefout tussen ketel en regelaar",
+          "ernst": "laag",
+          "oorzaken": [
+            "Slechte verbinding van de bedrading op de OpenTherm of EMS bus",
+            "Defecte thermostaat of gateway",
+            "Verkeerde parameters ingesteld"
+          ],
+          "controlepunten": [
+            "Controleer de aansluitklemmen van de thermostaat op de ketel",
+            "Test of de ketel normaal functioneert op handmatige instelling"
+          ],
+          "stappen": [
+            {
+              "titel": "Controleer aansluitingen",
+              "omschrijving": "Zorg dat de bedrading goed aangedrukt is op de klemmen. Reinig eventueel oxide op de klemmen."
+            },
+            {
+              "titel": "Test zonder thermostaat",
+              "omschrijving": "Koppel de thermostaat los en stel de ketel in op handmatige modus. Als de ketel nu normaal werkt, is het probleem in de thermostaat of bedrading."
+            }
+          ],
+          "vervanging": "Vervang thermostaat of gateway indien defect.",
+          "installateur": "Buscommunicatieproblemen kunnen complex zijn; raadpleeg de fabrikant servicedesk.",
+          "veiligheid": null
+        }
+      }
+    },
+    "remeha": {
+      "naam": "Remeha",
+      "kleur": "#005aab",
+      "beschrijving": "Remeha (BDR Thermea) produceert hoogrendement cv-ketels voor residentieel en semi-commercieel gebruik. Bekende modellen zijn de Avanta, Calenta en Tzerra.",
+      "modellen": {
+        "avanta": {
+          "naam": "Avanta 28c",
+          "info": "Populaire compactketel, 28 kW, OpenTherm/EMS2 compatibel",
+          "storingen": [
+            "e5",
+            "e9",
+            "h02",
+            "lf"
+          ]
+        },
+        "calenta": {
+          "naam": "Calenta Ace 35c",
+          "info": "Hoog vermogen combiketel voor grotere woningen",
+          "storingen": [
+            "e5",
+            "e9",
+            "h02",
+            "e3"
+          ]
+        },
+        "tzerra": {
+          "naam": "Tzerra Ace 28c",
+          "info": "Compacte en stille combiketel, nieuwste generatie",
+          "storingen": [
+            "e5",
+            "lf",
+            "h02"
+          ]
+        }
+      },
+      "storingen": {
+        "e5": {
+          "code": "E5",
+          "beschrijving": "Aansteekbeveiliging – geen vlam gedetecteerd na 3 opstartpogingen",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gastoevoer onderbroken of afgesloten",
+            "Gasdruk buiten specificatie",
+            "Elektrode slijtage of verkeerde positie",
+            "Ionisatiesensor defect",
+            "Vochtige elektrodebedrading"
+          ],
+          "controlepunten": [
+            "Gasafsluiter open?",
+            "Statische gasdruk 20–25 mbar?",
+            "Elektrode: visueel intact, afstand correct?",
+            "Ionisatiekabel weerstand < 1 MΩ?"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset – max. 3x",
+              "omschrijving": "Druk de resetknop in (2 sec). Na 3 resets zonder resultaat: stop en analyseer verder. Meer resets beschadigen de gaskraan."
+            },
+            {
+              "titel": "Verifieer gastoevoer",
+              "omschrijving": "Check de gasafsluiter bij de ketel. Controleer of andere gastoestellen (kookplaat, etc.) wel werken."
+            },
+            {
+              "titel": "Meet gasdruk",
+              "omschrijving": "Aansluiten op testpunt voorzijde gascombi. Statisch 25 mbar; minimaal dynamisch 18 mbar bij vollast."
+            },
+            {
+              "titel": "Inspecteer elektrode",
+              "omschrijving": "Elektrode verwijderen. Reinigen met schuursponsje. Afslagafstand Remeha Avanta: 3,0–3,5 mm. Controleer keramisch isolatiestuk op scheurtjes."
+            },
+            {
+              "titel": "Meet ionisatiekabel",
+              "omschrijving": "Kabel loskoppelen aan beide zijden. Weerstand meten: < 500 kΩ is acceptabel. Hoger: vervangen."
+            }
+          ],
+          "vervanging": "Elektrode na 5 jaar preventief vervangen bij onderhoud. Ionisatiekabel bij weerstand > 1 MΩ.",
+          "installateur": "Gasgerelateerde oorzaken: erkend installateur vereist.",
+          "veiligheid": "Bij gaslucht: niet resetten. Ventileren, gas afsluiten, 0800-9009 bellen (Enexis/Stedin)."
+        },
+        "e9": {
+          "code": "E9",
+          "beschrijving": "Waterdruk te laag – druk onder 0,8 bar",
+          "ernst": "laag",
+          "oorzaken": [
+            "Lekkage in het systeem",
+            "Expansievat defect of ontladen",
+            "Automatische ontluchter lekt",
+            "Natuurlijk drukverlies over tijd (vullen nodig)"
+          ],
+          "controlepunten": [
+            "Lees de waterdruk af op de manometer (doel: 1,5 bar koud)",
+            "Inspecteer zichtbare leidingen op lekkage",
+            "Controleer automatische ontluchters op doorlooplekken"
+          ],
+          "stappen": [
+            {
+              "titel": "Bijvullen",
+              "omschrijving": "Open de vulkraan op het systeem totdat de manometer 1,5 bar aangeeft. Sluit de vulkraan. Controleer of de druk stabiel blijft."
+            },
+            {
+              "titel": "Observeer druk na 24 uur",
+              "omschrijving": "Een gezond systeem mag maximaal 0,2 bar per dag verliezen. Meer verlies = lekkage of defect expansievat."
+            },
+            {
+              "titel": "Controleer expansievat",
+              "omschrijving": "Meet de druk van het expansievat via het schraderventiel (koude ketel, systeem drukloos). Moet gelijk zijn aan de statische vulsysteem druk (±0,75 bar)."
+            }
+          ],
+          "vervanging": "Expansievat vervangen als de membraan defect is. Levensduur: 8–12 jaar.",
+          "installateur": "Lekkage opsporen en repareren vereist een installateur.",
+          "veiligheid": null
+        },
+        "h02": {
+          "code": "H02",
+          "beschrijving": "Aanvoertemperatuur CV te hoog – oververhittingsbeveiliging",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Circulatiepomp defect of vastgelopen",
+            "Lucht in het systeem – slechte circulatie",
+            "Thermostatische afsluiters volledig gesloten",
+            "Warmtewisselaar vervuild",
+            "Stroomonderbreker pomp gesprongen"
+          ],
+          "controlepunten": [
+            "Draait de pomp? Hoor je de pomp?",
+            "Controleer de pompinstelling (min. stand 2 of auto)",
+            "Zijn thermostatische radiatorkranen deels open?",
+            "Controleer of de groep van de pomp niet gesprongen is"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset en luister",
+              "omschrijving": "Reset de ketel. Hoor je de pomp opstarten? Zo niet: controleer de stroomvoorziening van de pomp."
+            },
+            {
+              "titel": "Ontlucht het systeem",
+              "omschrijving": "Ontlucht alle radiatoren van boven naar beneden. Hercontroleer de waterdruk na het ontluchten."
+            },
+            {
+              "titel": "Verifieer pompwerking",
+              "omschrijving": "Meet de spanning op de pomp aansluitklemmen (230V AC). Als spanning aanwezig maar geen beweging: pomp vervangen."
+            }
+          ],
+          "vervanging": "Circulatiepomp vervangen na 10–15 jaar of bij defect.",
+          "installateur": "Pompvervanging en warmtewisselaarsreiniging door erkend installateur.",
+          "veiligheid": "Ketel niet in bedrijf stellen als de pomp zeker defect is. Kans op overbrengen van schade naar warmtewisselaar."
+        },
+        "lf": {
+          "code": "LF",
+          "beschrijving": "Laag debiet / flow sensor detecteert onvoldoende doorstroom tapwater",
+          "ernst": "laag",
+          "oorzaken": [
+            "Waterdruk in huis te laag",
+            "Filter voor ketel verstopt",
+            "Tapwaterwarmtewisselaar sterk verkalkt",
+            "Flowsensor (flowmeter) defect"
+          ],
+          "controlepunten": [
+            "Meet waterdruk op tapkraan (min. 2 bar)",
+            "Reinig of vervang het filter vóór de ketel",
+            "Controleer of ontkalken al eerder gedaan is"
+          ],
+          "stappen": [
+            {
+              "titel": "Reinig het voorfilter",
+              "omschrijving": "Zet de koudwaterafsluiter dicht. Demonteer het voorfilter. Reinig met water. Hermonteren."
+            },
+            {
+              "titel": "Meet tapwaterdruk",
+              "omschrijving": "Open een koude kraan en meet de druk met drukmeter. Onder 2 bar: probleem ligt bij de watermeter/huisaansluiting."
+            },
+            {
+              "titel": "Test de flowsensor",
+              "omschrijving": "Open een tapkraan. Meet de pulssignalen van de flowsensor op de PCB (raadpleeg serviceschema)."
+            }
+          ],
+          "vervanging": "Flowsensor vervangen bij defect. Tapwaterwarmtewisselaar ontkalken of vervangen.",
+          "installateur": "Ontkalken warmtewisselaar: specialistische werkzaamheid, erkend installateur aanbevolen.",
+          "veiligheid": null
+        },
+        "e3": {
+          "code": "E3",
+          "beschrijving": "Rookgastemp. sensor / maximum temperatuur overschreden afvoer",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Verstopte of te lange rookgasafvoerleiding",
+            "Terugslag rookgas bij wind",
+            "Defecte afvoertemperatuursensor"
+          ],
+          "controlepunten": [
+            "Inspecteer rookgasafvoer buiten op blokkade",
+            "Controleer de maximale leidinglengte (raadpleeg installatiehandleiding)",
+            "Meet sensorweerstand"
+          ],
+          "stappen": [
+            {
+              "titel": "Inspecteer rookgasuitmonding",
+              "omschrijving": "Controleer op fysieke blokkade, vogelschade, ijsvorming of condens-terugloop."
+            },
+            {
+              "titel": "Meet afvoertemperatuur",
+              "omschrijving": "Meet met flue gas analyser op testpunt. Boven 100°C: warmtewisselaar reinigen."
+            }
+          ],
+          "vervanging": "Afvoersensor vervangen bij afwijkende weerstandswaarde.",
+          "installateur": "Erkend installateur vereist voor rookgasmetingen en afvoermodificaties.",
+          "veiligheid": "CO-gevaar bij rookgaslekkage. Zorg voor CO-melder in de buurt van de ketel."
+        }
+      }
+    },
+    "nefit": {
+      "naam": "Nefit",
+      "kleur": "#e30613",
+      "beschrijving": "Nefit (onderdeel van Bosch) is een populair consumentenmerk met betrouwbare ketels. De Trendline, Proline en Topline zijn veelgebruikte modellen.",
+      "modellen": {
+        "trendline": {
+          "naam": "Trendline HRC30",
+          "info": "Veelgebruikte combiketel, 30 kW",
+          "storingen": [
+            "6a",
+            "ea",
+            "5",
+            "5l"
+          ]
+        },
+        "proline": {
+          "naam": "Proline HRC30",
+          "info": "Verbeterde versie Trendline met iCon display",
+          "storingen": [
+            "6a",
+            "ea",
+            "5"
+          ]
+        },
+        "topline": {
+          "naam": "Topline HRCII",
+          "info": "Hoog segment ketel met uitgebreid display",
+          "storingen": [
+            "6a",
+            "5",
+            "5l"
+          ]
+        }
+      },
+      "storingen": {
+        "6a": {
+          "code": "6A",
+          "beschrijving": "Geen vlam na ontsteking – aansteekbeveiliging",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasprobleem: druk, afsluiter of meter",
+            "Elektrode slijtage of te grote afslagafstand",
+            "Vervuilde ionisatiestang",
+            "Gasblok (ventiel) defect"
+          ],
+          "controlepunten": [
+            "Alle gasafsluiters open?",
+            "Gasdruk 20–25 mbar?",
+            "Elektrode conditie?",
+            "Andere gasapparaten functioneren?"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset (max. 3x)",
+              "omschrijving": "Houd de resetknop 3 seconden ingedrukt. Herhaal maximaal 3 keer. Na 3x zonder resultaat: niet meer resetten."
+            },
+            {
+              "titel": "Controleer gaszijde",
+              "omschrijving": "Controleer de afsluiter bij de meter en bij de ketel. Controleer bij andere toestellen of gas aanwezig is."
+            },
+            {
+              "titel": "Elektrode en ionisatiestang",
+              "omschrijving": "Verwijder en reinig beide. Afslagafstand electrode: 3–4 mm. Ionisatiestang: schoonvegen met droog doekje."
+            },
+            {
+              "titel": "Gasblok",
+              "omschrijving": "Als alle bovenstaande stappen OK zijn en de fout blijft aanhouden: gasblok (magneetventiel) testen door een monteur."
+            }
+          ],
+          "vervanging": "Gasblok vervangen is specialistische werkzaamheid.",
+          "installateur": "Gasblok of gasdrukproblemen: erkend installateur vereist.",
+          "veiligheid": "Gaslucht? Niet resetten. Raam openen. Gas afsluiten. Bel 0800-9009."
+        },
+        "ea": {
+          "code": "EA",
+          "beschrijving": "Waterdruk te laag – systeem onder minimumdruk",
+          "ernst": "laag",
+          "oorzaken": [
+            "Onvoldoende vuldruk (onder 0,8 bar)",
+            "Lekkage in het CV-systeem",
+            "Expansievat defect"
+          ],
+          "controlepunten": [
+            "Manometerstand (doel: 1,5 bar)",
+            "Zichtbare leidingen op lekkage controleren",
+            "Expansievat druk checken"
+          ],
+          "stappen": [
+            {
+              "titel": "Bijvullen systeem",
+              "omschrijving": "Open de vulkraan tot 1,5 bar. Sluiten. Na 15 minuten opnieuw controleren. Staat de druk nog op 1,5 bar? Klaar. Daalt de druk? → lekkage onderzoeken."
+            },
+            {
+              "titel": "Expansievat controleren",
+              "omschrijving": "Zet systeem drukloos. Meet via schraderventiel de druk in het expansievat. Doorgaans 0,75 bar. Lager: bijpompen of vervangen."
+            }
+          ],
+          "vervanging": "Expansievat: levensduur 10–12 jaar.",
+          "installateur": "Lekkageopsporing en expansievat vervanging: erkend installateur.",
+          "veiligheid": null
+        },
+        "5": {
+          "code": "5",
+          "beschrijving": "Oververhitting – aanvoertemperatuur te hoog",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Pomp defect of vastgelopen",
+            "Lucht in het systeem",
+            "Thermostatische afsluiters volledig gesloten",
+            "Vuil filter retour"
+          ],
+          "controlepunten": [
+            "Is de pomp hoorbaar actief?",
+            "Zijn radiatorkranen deels open?",
+            "Is er lucht in de radiatoren?"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset en luister naar pomp",
+              "omschrijving": "Reset ketel. Hoor je de pomp? Zo ja: check circulatie. Zo nee: controleer elektra pomp en vervang indien nodig."
+            },
+            {
+              "titel": "Ontlucht het systeem",
+              "omschrijving": "Ontlucht alle radiatoren. Herstel de waterdruk na ontluchten. Observeer of de ketel nu normaal bijbrandt."
+            }
+          ],
+          "vervanging": "Circulatiepomp na defect of na 12–15 jaar.",
+          "installateur": "Aanbevolen voor pompvervanging.",
+          "veiligheid": "Ketel niet forceren bij aanhoudende oververhitting."
+        },
+        "5l": {
+          "code": "5L",
+          "beschrijving": "Overtemperatuur warmtewisselaar – hogere prioriteit dan storing 5",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Circulatiepomp volledig defect",
+            "Warmtewisselaar ernstig vervuild",
+            "Debietschakelaar (flow switch) defect"
+          ],
+          "controlepunten": [
+            "Pompwerking verifiëren",
+            "Debietschakelaar testen"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset (1x)",
+              "omschrijving": "Reset de ketel 1x. Als de fout direct terugkeert: pomp zeker defect of debietschakelaar defect."
+            },
+            {
+              "titel": "Test debietschakelaar",
+              "omschrijving": "Meet de continuïteit van de debietschakelaar (normaal gesloten bij voldoende doorstroom). Open schakelaar bij stromend water = defect."
+            }
+          ],
+          "vervanging": "Warmtewisselaar of debietschakelaar vervangen.",
+          "installateur": "Warmtewisselaar vervanging: erkend installateur.",
+          "veiligheid": "Ketel buiten bedrijf stellen tot oorzaak gevonden."
+        }
+      }
+    },
+    "vaillant": {
+      "naam": "Vaillant",
+      "kleur": "#009944",
+      "beschrijving": "Vaillant is een Duits kwaliteitsmerk met een breed gamma aan cv-ketels. De ecoTEC Plus en ecoTEC Pro zijn de meest verkochte modellen in Nederland.",
+      "modellen": {
+        "ecotec-plus": {
+          "naam": "ecoTEC Plus VU 306/5-5",
+          "info": "Topmodel, 30 kW, CAN-bus diagnostiek, condensatietechnologie",
+          "storingen": [
+            "f22",
+            "f28",
+            "f29",
+            "f75"
+          ]
+        },
+        "ecotec-pro": {
+          "naam": "ecoTEC Pro VCW 286/5-3",
+          "info": "Combiketel 28 kW, populair in nieuwbouw",
+          "storingen": [
+            "f22",
+            "f28",
+            "f75"
+          ]
+        }
+      },
+      "storingen": {
+        "f22": {
+          "code": "F22",
+          "beschrijving": "Waterdruk te laag – druk onder 0,05 bar",
+          "ernst": "laag",
+          "oorzaken": [
+            "Waterverlies door lekkage",
+            "Expansievat defect",
+            "Druksensor defect",
+            "Automatische ontluchter continu actief (verlies)"
+          ],
+          "controlepunten": [
+            "Manometerstand",
+            "Zichtbare lekkages",
+            "Expansievat druk"
+          ],
+          "stappen": [
+            {
+              "titel": "Bijvullen",
+              "omschrijving": "Open de vulkraan aan de onderzijde van de ketel. Vul bij tot 1,5 bar. Sluit de kraan. Reset de ketel."
+            },
+            {
+              "titel": "Systeem observeren",
+              "omschrijving": "Controleer de druk na 24 uur. Aanhoudend verlies: lekkage of expansievat."
+            }
+          ],
+          "vervanging": "Expansievat: standaard vervanging na 10 jaar.",
+          "installateur": "Lekkageopsporing door erkend installateur.",
+          "veiligheid": null
+        },
+        "f28": {
+          "code": "F28",
+          "beschrijving": "Aansteekfout – geen vlam gedetecteerd",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gastoevoer onderbroken",
+            "Elektrode defect",
+            "Ionisatiesensor vervuild",
+            "Gascombi defect"
+          ],
+          "controlepunten": [
+            "Gastoevoer aanwezig?",
+            "Elektrode afslagafstand correct (3–4 mm)?",
+            "Ionisatiestroom meet je min. 1 µA?"
+          ],
+          "stappen": [
+            {
+              "titel": "Reset",
+              "omschrijving": "Druk op de resetknop. Observeer of de ketel probeert te ontsteken."
+            },
+            {
+              "titel": "Gastoevoer",
+              "omschrijving": "Verifieer dat gas aanwezig is op andere toestellen."
+            },
+            {
+              "titel": "Elektrode",
+              "omschrijving": "Inspecteer, reinig en stel de afslagafstand correct in."
+            }
+          ],
+          "vervanging": "Elektrode vervangen bij zichtbare beschadiging.",
+          "installateur": "Gasdruk en gascombi-problemen: erkend installateur.",
+          "veiligheid": "Gaslucht → gas afsluiten, ventileren, 0800-9009."
+        },
+        "f29": {
+          "code": "F29",
+          "beschrijving": "Vlam uitgevallen tijdens bedrijf",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasdrukfluctuaties",
+            "Ionisatiesensor beschadigd",
+            "Aardingsprobleem"
+          ],
+          "controlepunten": [
+            "Dynamische gasdruk meten bij last",
+            "Ionisatiekabel weerstand",
+            "Aardverbinding ketel"
+          ],
+          "stappen": [
+            {
+              "titel": "Meet dynamische gasdruk",
+              "omschrijving": "Controleer de gasdruk terwijl de ketel op vollast draait. Mag niet meer dan 3 mbar dalen."
+            },
+            {
+              "titel": "Controleer aarding",
+              "omschrijving": "Meet de aardverbinding van de ketel. Een slechte aarding geeft vals ionisatiesignaal."
+            }
+          ],
+          "vervanging": "Gascombi of ionisatiesensor bij defect.",
+          "installateur": "Erkend installateur vereist.",
+          "veiligheid": null
+        },
+        "f75": {
+          "code": "F75",
+          "beschrijving": "Pompfout – geen drukopbouw gedetecteerd bij pompstart",
+          "ernst": "middel",
+          "oorzaken": [
+            "Circulatiepomp vastgelopen (kalkafzetting)",
+            "Drukverschilsensor defect",
+            "Pomp draait maar er is lucht in het systeem"
+          ],
+          "controlepunten": [
+            "Is de pomp hoorbaar actief?",
+            "Waterdruk stabiel?",
+            "Is het systeem volledig ontlucht?"
+          ],
+          "stappen": [
+            {
+              "titel": "Deblokkeer de pomp",
+              "omschrijving": "Zet de ketel uit. Zet de ketel weer aan. Hoor je een zoemend geluid van de pomp maar geen circulatie? Open de ontluchtingsschroef op de pomp en laat lucht ontsnappen."
+            },
+            {
+              "titel": "Draai de pompas",
+              "omschrijving": "Zet de ketel van stroom. Verwijder de schroef op de voorkant van de pomp. Draai de as handmatig los met een schroevendraaier."
+            },
+            {
+              "titel": "Test drukverschilsensor",
+              "omschrijving": "Meet de weerstand of spanning van de drukverschilsensor (raadpleeg serviceschema Vaillant F75)."
+            }
+          ],
+          "vervanging": "Pomp of drukverschilsensor bij defect.",
+          "installateur": "Pompvervanging: erkend installateur aanbevolen.",
+          "veiligheid": null
+        }
+      }
+    },
+    "bosch": {
+      "naam": "Bosch",
+      "kleur": "#e20015",
+      "beschrijving": "Bosch (vroeger Junkers, ook eigenaar van Nefit) levert betrouwbare cv-ketels in het middensegment. Bekende modellen zijn de Condens 7000i en Gaz 6000W.",
+      "modellen": {
+        "condens7000": {
+          "naam": "Condens 7000i W 30",
+          "info": "Modern condensatiemodel met EMS-2 businterface",
+          "storingen": [
+            "a23",
+            "e9",
+            "5c"
+          ]
+        },
+        "gaz6000": {
+          "naam": "Gaz 6000W 35 kW",
+          "info": "Semi-commercieel model voor grote woningen",
+          "storingen": [
+            "a23",
+            "5c"
+          ]
+        }
+      },
+      "storingen": {
+        "a23": {
+          "code": "A23",
+          "beschrijving": "Branderbeveiliging – vlam aanwezig terwijl gasventiel gesloten hoort te zijn",
+          "ernst": "hoog",
+          "oorzaken": [
+            "Gasventiel lekt intern (blijft doorstromen)",
+            "Ionisatiesensor geeft foutief signaal",
+            "PCB defect"
+          ],
+          "controlepunten": [
+            "Ionisatiesignaal meten bij gas uit",
+            "Gasventiel testen"
+          ],
+          "stappen": [
+            {
+              "titel": "Niet resetten",
+              "omschrijving": "Deze fout is een veiligheidsblokkering. Sluit de gasafsluiter. Neem contact op met een erkend monteur."
+            },
+            {
+              "titel": "Ionisatiesignaal meten",
+              "omschrijving": "Schakel gas uit. Meet of er nog ionisatiesignaal aanwezig is. Zo ja: sensor geeft foutief signaal. Zo nee: gas lekt door ventiel."
+            }
+          ],
+          "vervanging": "Gasventiel of ionisatiesensor vervangen.",
+          "installateur": "Verplicht erkend installateur – veiligheidsrelevante storing.",
+          "veiligheid": "Ketel direct buiten bedrijf stellen. Gas afsluiten. Niet resetten vóór diagnose door erkend monteur."
+        },
+        "e9": {
+          "code": "E9",
+          "beschrijving": "Waterdruk te laag",
+          "ernst": "laag",
+          "oorzaken": [
+            "Verlies van systeemwater",
+            "Lekkage",
+            "Expansievat"
+          ],
+          "controlepunten": [
+            "Manometerstand",
+            "Lekkage?"
+          ],
+          "stappen": [
+            {
+              "titel": "Bijvullen",
+              "omschrijving": "Vul het systeem bij tot 1,5 bar via de vulkraan."
+            }
+          ],
+          "vervanging": "Expansievat na 10 jaar.",
+          "installateur": "Lekkage: erkend installateur.",
+          "veiligheid": null
+        },
+        "5c": {
+          "code": "5C",
+          "beschrijving": "Temperatuurverschil aanvoer/retour te groot – debietprobleem",
+          "ernst": "middel",
+          "oorzaken": [
+            "Pomp te laag ingesteld",
+            "Thermostatische kranen te dicht",
+            "Lucht in het systeem"
+          ],
+          "controlepunten": [
+            "Pompinstelling (stand 2 minimum)",
+            "Thermostatische kranen deels open?",
+            "Lucht in radiatoren?"
+          ],
+          "stappen": [
+            {
+              "titel": "Pompinstelling verhogen",
+              "omschrijving": "Stel de pomp in op stand 2 of auto. Meet na 10 minuten het temperatuurverschil (doel: < 20°C)."
+            },
+            {
+              "titel": "Ontlucht het systeem",
+              "omschrijving": "Ontlucht alle radiatoren systematisch van boven naar beneden."
+            }
+          ],
+          "vervanging": "Pomp bij defect vervangen.",
+          "installateur": "Balancering van het systeem door erkend installateur.",
+          "veiligheid": null
+        }
+      }
+    }
+  },
+  "populair": [
+    {
+      "merkKey": "intergas",
+      "modelKey": "hre28",
+      "code": "26"
+    },
+    {
+      "merkKey": "remeha",
+      "modelKey": "avanta",
+      "code": "e5"
+    },
+    {
+      "merkKey": "nefit",
+      "modelKey": "trendline",
+      "code": "6a"
+    },
+    {
+      "merkKey": "vaillant",
+      "modelKey": "ecotec-plus",
+      "code": "f22"
+    },
+    {
+      "merkKey": "vaillant",
+      "modelKey": "ecotec-plus",
+      "code": "f75"
+    },
+    {
+      "merkKey": "intergas",
+      "modelKey": "hre28",
+      "code": "af"
+    },
+    {
+      "merkKey": "remeha",
+      "modelKey": "avanta",
+      "code": "e9"
+    },
+    {
+      "merkKey": "nefit",
+      "modelKey": "trendline",
+      "code": "5"
+    },
+    {
+      "merkKey": "bosch",
+      "modelKey": "condens7000",
+      "code": "a23"
+    }
+  ],
+  "kennisbank": [
+    {
+      "tag": "Onderhoud",
+      "titel": "Jaarlijks CV-ketel onderhoud: wat wordt er gecontroleerd?",
+      "tekst": "Een overzicht van alle punten die een erkend installateur controleert tijdens het jaarlijks onderhoud."
+    },
+    {
+      "tag": "Gasdruk",
+      "titel": "Gasdruk meten aan een cv-ketel: stap voor stap",
+      "tekst": "Hoe sluit je een manometer aan op het testpunt van een gascombi en wat zijn de grenswaarden?"
+    },
+    {
+      "tag": "Ionisatie",
+      "titel": "Ionisatiestroom meten en beoordelen",
+      "tekst": "Waarop let je bij het meten van de ionisatiestroom en wanneer is vervanging van de elektrode noodzakelijk?"
+    },
+    {
+      "tag": "Expansievat",
+      "titel": "Expansievat controleren en vervangen",
+      "tekst": "Wanneer is een expansievat defect, hoe meet je de druk en wanneer is vervanging noodzakelijk?"
+    },
+    {
+      "tag": "OpenTherm",
+      "titel": "OpenTherm en EMS-bus: communicatieprotocollen uitgelegd",
+      "tekst": "Verschil tussen on/off, OpenTherm en EMS-bus, en hoe je communicatiefouten diagnosticeert."
+    },
+    {
+      "tag": "Rookgas",
+      "titel": "Rookgasafvoer en luchttoevoer: materialen en maximalelengtes",
+      "tekst": "Overzicht van toegestane buismaterialen, maximale leidinglengtes en eisen per merk."
+    }
+  ]
+}
