@@ -7,7 +7,7 @@
 <meta name="description" content="Professioneel kennisplatform voor cv-ketel storingscodes. Zoek per merk, model en storingscode. Voor installateurs en monteurs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
-<link rel="stylesheet" href="assets/css/ketelcode.css">
+<link rel="stylesheet" href="assets/css/ketelcode.css?v=2">
 </head>
 <body>
 
@@ -61,14 +61,6 @@
 
     <div class="section">
       <div class="section-header">
-        <div class="section-title">Populaire storingen</div>
-        <span class="section-link" onclick="showPage('merken')">Alle storingen →</span>
-      </div>
-      <div class="popular-grid" id="popular-grid"></div>
-    </div>
-
-    <div class="section">
-      <div class="section-header">
         <div class="section-title">Categorieën</div>
       </div>
       <div class="cat-grid">
@@ -97,10 +89,9 @@
 
     <div class="section">
       <div class="section-header">
-        <div class="section-title">Kennisbank</div>
-        <span class="section-link" onclick="showPage('kennisbank')">Alle artikelen →</span>
+        <div class="section-title">Kennisbank <span class="soon-badge">binnenkort</span></div>
       </div>
-      <div class="kb-grid" id="home-kb-preview"></div>
+      <p class="coming-soon-text">Technische artikelen, onderhoudstips en achtergrondinfo voor installateurs — binnenkort beschikbaar.</p>
     </div>
 
   </div>
@@ -229,13 +220,13 @@
         <span class="sep">›</span>
         <span class="current">Kennisbank</span>
       </div>
-      <h1>Kennisbank</h1>
+      <h1>Kennisbank <span class="soon-badge">binnenkort</span></h1>
       <p>Technische artikelen, onderhoudstips en achtergrondinfo voor installateurs.</p>
     </div>
   </div>
   <div class="container">
     <div class="section">
-      <div class="kb-grid" id="kennisbank-grid"></div>
+      <p class="coming-soon-text">De kennisbank wordt binnenkort aangevuld met artikelen voor installateurs.</p>
     </div>
   </div>
 </div>
@@ -318,6 +309,6 @@
   </div>
 </footer>
 
-<script src="assets/js/ketelcode.js"></script>
+<script src="assets/js/ketelcode.js?v=2"></script>
 </body>
 </html>

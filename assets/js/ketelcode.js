@@ -304,9 +304,6 @@ async function loadData() {
   renderBrandGrid('home-brand-grid');
   renderBrandGrid('merken-brand-grid');
   renderQuickTags('hero-quick-tags');
-  renderPopularGrid();
-  renderKennisbankPreview('home-kb-preview', 3);
-  renderKennisbankPreview('kennisbank-grid');
 }
 
 function renderQuickTags(containerId) {
@@ -375,41 +372,5 @@ function renderBrandGrid(containerId) {
   });
 }
 
-function renderPopularGrid() {
-  const container = document.getElementById('popular-grid');
-  if (!container) return;
-  container.innerHTML = '';
-  DATA.populair.forEach(({ merkKey, modelKey, code }) => {
-    const merk = DATA.merken[merkKey];
-    const model = merk.modellen[modelKey];
-    const s = getStoring(merk, code);
-    if (!s) return;
-    const div = document.createElement('div');
-    div.className = 'popular-card';
-    div.innerHTML = `
-      <div class="pop-code">${s.code}</div>
-      <div class="pop-info">
-        <div class="pop-merk">${merk.naam} · ${model.naam}</div>
-        <div class="pop-desc">${s.beschrijving}</div>
-      </div>
-    `;
-    div.onclick = () => openStoring(merkKey, modelKey, code);
-    container.appendChild(div);
-  });
-}
-
-function renderKennisbankPreview(containerId, limit) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
-  container.innerHTML = '';
-  const items = limit ? DATA.kennisbank.slice(0, limit) : DATA.kennisbank;
-  items.forEach(kb => {
-    const div = document.createElement('div');
-    div.className = 'kb-card';
-    div.innerHTML = `<div class="kb-tag">${kb.tag}</div><h3>${kb.titel}</h3><p>${kb.tekst}</p>`;
-    div.onclick = () => showPage('kennisbank');
-    container.appendChild(div);
-  });
-}
 
 loadData();
