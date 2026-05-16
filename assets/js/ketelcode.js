@@ -27,6 +27,23 @@ function showPage(pageId) {
   window.scrollTo(0, 0);
 }
 
+function compareModelNaam(a, b) {
+  return a.localeCompare(b, 'nl', { sensitivity: 'base' });
+}
+
+function compareStoringCode(a, b) {
+  const na = Number(a);
+  const nb = Number(b);
+  if (!Number.isNaN(na) && !Number.isNaN(nb)) return na - nb;
+  return String(a).localeCompare(String(b), 'nl', { numeric: true, sensitivity: 'base' });
+}
+
+function compareMerkTableRows(a, b) {
+  const byModel = compareModelNaam(a.modelNaam, b.modelNaam);
+  if (byModel !== 0) return byModel;
+  return compareStoringCode(a.code, b.code);
+}
+
 function openMerk(merkKey) {
   state.currentMerk = merkKey;
   const merk = DATA.merken[merkKey];
@@ -43,7 +60,9 @@ function openMerk(merkKey) {
 
   const mg = document.getElementById('models-grid');
   mg.innerHTML = '';
-  Object.entries(merk.modellen).forEach(([modelKey, model]) => {
+  Object.entries(merk.modellen)
+    .sort(([, a], [, b]) => compareModelNaam(a.naam, b.naam))
+    .forEach(([modelKey, model]) => {
     const div = document.createElement('div');
     div.className = 'model-card';
     div.innerHTML = `<div class="model-name">${model.naam}</div><div class="model-info">${model.storingen.length} storingscodes · ${model.info}</div>`;
@@ -52,10 +71,12 @@ function openMerk(merkKey) {
   });
 
   const rows = [];
-  Object.entries(merk.modellen).forEach(([modelKey, model]) => {
+  Object.entries(merk.modellen)
+    .sort(([, a], [, b]) => compareModelNaam(a.naam, b.naam))
+    .forEach(([modelKey, model]) => {
     buildGroupedStoringen(merk, model, modelKey).forEach(row => rows.push(row));
   });
-  rows.sort((a, b) => Number(a.code) - Number(b.code));
+  rows.sort(compareMerkTableRows);
   state.merkTableRows = rows;
   renderMerkTable(rows);
 
@@ -85,6 +106,7 @@ function filterMerkTable(q) {
     r.s.beschrijving.toLowerCase().includes(lower) ||
     r.modelNaam.toLowerCase().includes(lower)
   );
+  filtered.sort(compareMerkTableRows);
   renderMerkTable(filtered);
 }
 
@@ -182,7 +204,7 @@ function buildGroupedStoringen(merk, model, modelKey = null) {
     }
   });
 
-  groups.sort((a, b) => Number(a.code) - Number(b.code));
+  groups.sort((a, b) => compareStoringCode(a.code, b.code));
   return groups;
 }
 
@@ -280,7 +302,9 @@ function openStoring(merkKey, modelKey, code) {
 function buildSearchIndex() {
   const idx = [];
   Object.entries(DATA.merken).forEach(([merkKey, merk]) => {
-    Object.entries(merk.modellen).forEach(([modelKey, model]) => {
+    Object.entries(merk.modellen)
+    .sort(([, a], [, b]) => compareModelNaam(a.naam, b.naam))
+    .forEach(([modelKey, model]) => {
       model.storingen.forEach(code => {
         const s = getStoring(merk, code);
         if (!s) return;
