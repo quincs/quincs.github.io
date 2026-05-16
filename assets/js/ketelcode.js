@@ -55,7 +55,7 @@ function openMerk(merkKey) {
   const rows = [];
   Object.entries(merk.modellen).forEach(([modelKey, model]) => {
     model.storingen.forEach(code => {
-      const s = merk.storingen[code];
+      const s = getStoring(merk, code);
       if (s) rows.push({ modelKey, modelNaam: model.naam, code, s });
     });
   });
@@ -124,7 +124,7 @@ function renderModelTable() {
   const tbody = document.getElementById('model-table-body');
   tbody.innerHTML = '';
   model.storingen.forEach(code => {
-    const s = merk.storingen[code];
+    const s = getStoring(merk, code);
     if (!s) return;
     if (state.modelFilterErnst !== 'alle' && s.ernst !== state.modelFilterErnst) return;
     const tr = document.createElement('tr');
@@ -146,6 +146,17 @@ function filterModel(ernst, btn) {
   renderModelTable();
 }
 
+function getStoring(merk, code) {
+  const entry = merk.storingen[code];
+  if (!entry) return null;
+  if (entry.alias) {
+    const canonical = merk.storingen[entry.alias];
+    if (!canonical) return null;
+    return { ...canonical, code };
+  }
+  return entry;
+}
+
 function openStoring(merkKey, modelKey, code) {
   state.currentMerk = merkKey;
   state.currentModel = modelKey;
@@ -153,7 +164,7 @@ function openStoring(merkKey, modelKey, code) {
 
   const merk = DATA.merken[merkKey];
   const model = merk.modellen[modelKey];
-  const s = merk.storingen[code];
+  const s = getStoring(merk, code);
   if (!s) return;
 
   document.getElementById('storing-breadcrumb').innerHTML = `
@@ -243,11 +254,11 @@ function buildSearchIndex() {
   Object.entries(DATA.merken).forEach(([merkKey, merk]) => {
     Object.entries(merk.modellen).forEach(([modelKey, model]) => {
       model.storingen.forEach(code => {
-        const s = merk.storingen[code];
+        const s = getStoring(merk, code);
         if (!s) return;
         idx.push({
           merkKey, modelKey,
-          code: s.code,
+          code,
           beschrijving: s.beschrijving,
           label: `${merk.naam} ${model.naam}`,
           ernst: s.ernst
@@ -329,7 +340,7 @@ function renderPopularGrid() {
   DATA.populair.forEach(({ merkKey, modelKey, code }) => {
     const merk = DATA.merken[merkKey];
     const model = merk.modellen[modelKey];
-    const s = merk.storingen[code];
+    const s = getStoring(merk, code);
     if (!s) return;
     const div = document.createElement('div');
     div.className = 'popular-card';

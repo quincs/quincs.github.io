@@ -365,155 +365,19 @@
         },
         "11": {
           "code": "11",
-          "beschrijving": "Sensorfout S1",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Lucht in installatie",
-            "Slechte sensorbevestiging",
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Ontlucht installatie",
-            "Controleer sensorbevestiging",
-            "Inspecteer bedrading",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Ontlucht installatie",
-              "omschrijving": "Draai de ontluchter op de ketel open tot water stroomt."
-            },
-            {
-              "titel": "Controleer sensorbevestiging",
-              "omschrijving": "Verifieer dat de S1 sensor goed is bevestigd op de warmwaterbuis."
-            },
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S1 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S1 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
-          "veiligheid": null
+          "alias": "10"
         },
         "12": {
           "code": "12",
-          "beschrijving": "Sensorfout S1",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Lucht in installatie",
-            "Slechte sensorbevestiging",
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Ontlucht installatie",
-            "Controleer sensorbevestiging",
-            "Inspecteer bedrading",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Ontlucht installatie",
-              "omschrijving": "Draai de ontluchter op de ketel open tot water stroomt."
-            },
-            {
-              "titel": "Controleer sensorbevestiging",
-              "omschrijving": "Verifieer dat de S1 sensor goed is bevestigd op de warmwaterbuis."
-            },
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S1 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S1 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
-          "veiligheid": null
+          "alias": "10"
         },
         "13": {
           "code": "13",
-          "beschrijving": "Sensorfout S1",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Lucht in installatie",
-            "Slechte sensorbevestiging",
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Ontlucht installatie",
-            "Controleer sensorbevestiging",
-            "Inspecteer bedrading",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Ontlucht installatie",
-              "omschrijving": "Draai de ontluchter op de ketel open tot water stroomt."
-            },
-            {
-              "titel": "Controleer sensorbevestiging",
-              "omschrijving": "Verifieer dat de S1 sensor goed is bevestigd op de warmwaterbuis."
-            },
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S1 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S1 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
-          "veiligheid": null
+          "alias": "10"
         },
         "14": {
           "code": "14",
-          "beschrijving": "Sensorfout S1",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Lucht in installatie",
-            "Slechte sensorbevestiging",
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Ontlucht installatie",
-            "Controleer sensorbevestiging",
-            "Inspecteer bedrading",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Ontlucht installatie",
-              "omschrijving": "Draai de ontluchter op de ketel open tot water stroomt."
-            },
-            {
-              "titel": "Controleer sensorbevestiging",
-              "omschrijving": "Verifieer dat de S1 sensor goed is bevestigd op de warmwaterbuis."
-            },
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S1 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S1 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
-          "veiligheid": null
+          "alias": "10"
         },
         "20": {
           "code": "20",
@@ -543,107 +407,19 @@
         },
         "21": {
           "code": "21",
-          "beschrijving": "Sensorfout S2",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Inspecteer bedrading S2",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S2 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S2 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd",
-          "veiligheid": null
+          "alias": "20"
         },
         "22": {
           "code": "22",
-          "beschrijving": "Sensorfout S2",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Inspecteer bedrading S2",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S2 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S2 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd",
-          "veiligheid": null
+          "alias": "20"
         },
         "23": {
           "code": "23",
-          "beschrijving": "Sensorfout S2",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Inspecteer bedrading S2",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S2 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S2 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd",
-          "veiligheid": null
+          "alias": "20"
         },
         "24": {
           "code": "24",
-          "beschrijving": "Sensorfout S2",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Breuken in bedrading",
-            "Sensor defect"
-          ],
-          "controlepunten": [
-            "Inspecteer bedrading S2",
-            "Test sensor"
-          ],
-          "stappen": [
-            {
-              "titel": "Controleer bedrading",
-              "omschrijving": "Inspecteer bedrading op de S2 sensor op breuk of beschadiging."
-            },
-            {
-              "titel": "Vervang sensor",
-              "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang S2 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd",
-          "veiligheid": null
+          "alias": "20"
         },
         "27": {
           "code": "27",
@@ -699,23 +475,7 @@
         },
         "30": {
           "code": "30",
-          "beschrijving": "Gasklep relais defect",
-          "ernst": "hoog",
-          "oorzaken": [
-            "Branderautomaat defect"
-          ],
-          "controlepunten": [
-            "Controleer gasklep relais"
-          ],
-          "stappen": [
-            {
-              "titel": "Vervang branderautomaat",
-              "omschrijving": "Vervang de branderautomaat met origineel Intergas onderdeel."
-            }
-          ],
-          "vervanging": "Vervang branderautomaat",
-          "installateur": "Raadpleeg servicedesk voor origineel onderdeel",
-          "veiligheid": null
+          "alias": "29"
         }
       }
     }
