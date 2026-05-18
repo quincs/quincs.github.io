@@ -142,7 +142,6 @@ function renderModelTable() {
     tr.innerHTML = `
       <td><span class="code-badge">${codeLabel}</span></td>
       <td style="color:var(--c-text)">${s.beschrijving}</td>
-      <td style="color:var(--c-text3);font-size:12px">Bekijken →</td>
     `;
     tr.onclick = () => openStoring(state.currentMerk, state.currentModel, code);
     tbody.appendChild(tr);
@@ -262,21 +261,6 @@ function openStoring(merkKey, modelKey, code) {
       </div>
     `).join('')}</div>`;
   body.appendChild(stapBlk);
-
-  const grid2 = document.createElement('div');
-  grid2.className = 'info-grid';
-  grid2.style.marginTop = '1.25rem';
-  grid2.innerHTML = `
-    <div class="info-block">
-      <div class="info-block-title"><span class="dot dot-accent"></span>Wanneer vervangen?</div>
-      <p style="font-size:14px;color:var(--c-text2);line-height:1.6">${s.vervanging}</p>
-    </div>
-    <div class="info-block">
-      <div class="info-block-title"><span class="dot dot-blue"></span>Erkend installateur nodig?</div>
-      <p style="font-size:14px;color:var(--c-text2);line-height:1.6">${s.installateur}</p>
-    </div>
-  `;
-  body.appendChild(grid2);
 
   if (s.veiligheid) {
     const veil = document.createElement('div');

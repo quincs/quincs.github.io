@@ -31,6 +31,70 @@
             "30",
             "26"
           ]
+        },
+        "hreco": {
+          "naam": "HREco",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "0",
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "27",
+            "29",
+            "30"
+          ]
+        },
+        "kk_hr": {
+          "naam": "KK HR",
+          "info": "Imported from documentatie PDF",
+          "storingen": []
+        },
+        "prestige": {
+          "naam": "Prestige",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "0",
+            "1",
+            "2",
+            "4",
+            "5",
+            "6",
+            "8",
+            "27",
+            "29",
+            "30"
+          ]
+        },
+        "xtreme": {
+          "naam": "Xtreme",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
         }
       },
       "storingen": {
@@ -54,8 +118,6 @@
               "omschrijving": "Vervang de defecte sensor met een origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang de defecte sensor S1 en/of S2",
-          "installateur": "Vervang sensoren altijd correct; incorrect gemonteerde sensoren kunnen ernstige schade veroorzaken",
           "veiligheid": null
         },
         "1": {
@@ -85,8 +147,6 @@
               "omschrijving": "Zorg dat er minimaal 2 radiatoren open staan en dat de pompstand hoog genoeg staat."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "2": {
@@ -110,8 +170,6 @@
               "omschrijving": "Controleer de kabelboom tussen sensoren en branderautomaat op beschadigingen."
             }
           ],
-          "vervanging": "Vervang S1 of S2 als beschadigd",
-          "installateur": "Bel een erkend installateur als probleem aanhoudt",
           "veiligheid": null
         },
         "4": {
@@ -147,8 +205,6 @@
               "omschrijving": "Controleer elektrode op vervuiling en afslagafstand (3-4 mm)."
             }
           ],
-          "vervanging": "Vervang ontsteekkabel, bougiedop of ontsteekunit indien nodig",
-          "installateur": "Bel erkend installateur als gasdruk buiten spec is",
           "veiligheid": "Nooit handmatig gastoevoer openen als gaslucht waarneembaar is"
         },
         "5": {
@@ -184,8 +240,6 @@
               "omschrijving": "Verifieer dat aarding van de ketel correct is aangesloten."
             }
           ],
-          "vervanging": "Vervang elektrode of ontsteekkabel indien beschadigd",
-          "installateur": "Bel erkend installateur als probleem aanhoudt",
           "veiligheid": null
         },
         "6": {
@@ -211,8 +265,6 @@
               "omschrijving": "Vervang de ontsteekkabel + bougiedop met origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang ontsteekkabel + bougiedop of ontsteekunit",
-          "installateur": "Raadpleeg servicedesk als probleem na vervanging aanhoudt",
           "veiligheid": null
         },
         "8": {
@@ -243,8 +295,6 @@
               "omschrijving": "Test ventilator; vervang indien nodig met origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang ventilator of branderautomaat",
-          "installateur": "Raadpleeg servicedesk voor diagnose",
           "veiligheid": null
         },
         "10": {
@@ -280,8 +330,6 @@
               "omschrijving": "Vervang S1 sensor met origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang S1 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd - incorrect monteren kan ernstige schade veroorzaken",
           "veiligheid": null
         },
         "11": {
@@ -321,8 +369,6 @@
               "omschrijving": "Vervang S2 sensor met origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang S2 sensor",
-          "installateur": "Zorg dat sensor correct wordt gemonteerd",
           "veiligheid": null
         },
         "21": {
@@ -380,8 +426,6 @@
               "omschrijving": "Meet weerstand van ionisatiekabel (max. 5 kΩ). Controleer stekkerverbinding op PCB."
             }
           ],
-          "vervanging": "Vervang elektrode als afslagafstand niet instelbaar is. Vervang ionisatiekabel bij weerstand > 5 kΩ.",
-          "installateur": "Schakel erkend installateur in als gasdruk buiten specificatie valt",
           "veiligheid": "Schakel gastoevoer nooit handmatig open als gaslucht waarneembaar is. Ventileer ruimte en bel netbeheerder."
         },
         "27": {
@@ -411,8 +455,6 @@
               "omschrijving": "Verifieer dat de branderautomaat geschikt is voor deze toepassing."
             }
           ],
-          "vervanging": "Vervang buitenvoeler of branderautomaat",
-          "installateur": "Controleer branderautomaat versie; vervang indien onjuist",
           "veiligheid": null
         },
         "29": {
@@ -430,8 +472,6 @@
               "omschrijving": "Vervang de branderautomaat met origineel Intergas onderdeel."
             }
           ],
-          "vervanging": "Vervang branderautomaat",
-          "installateur": "Raadpleeg servicedesk voor origineel onderdeel",
           "veiligheid": null
         },
         "30": {
@@ -460,8 +500,6 @@
               "omschrijving": "Koppel de thermostaat los en stel de ketel in op handmatige modus. Als de ketel nu normaal werkt, is het probleem in de thermostaat of bedrading."
             }
           ],
-          "vervanging": "Vervang thermostaat of gateway indien defect.",
-          "installateur": "Buscommunicatieproblemen kunnen complex zijn; raadpleeg de fabrikant servicedesk.",
           "veiligheid": null
         }
       }
@@ -473,7 +511,7 @@
       "modellen": {
         "avanta": {
           "naam": "Avanta",
-          "info": "24c · 28c · 35c",
+          "info": "Compacte wandketel",
           "storingen": [
             "e0",
             "e1",
@@ -492,6 +530,48 @@
             "e43",
             "e44",
             "e45"
+          ]
+        },
+        "avanta_ace": {
+          "naam": "Avanta Ace",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
+        },
+        "calenta_40l": {
+          "naam": "Calenta 40L",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
+        },
+        "calenta_ace": {
+          "naam": "Calenta Ace",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
+        },
+        "calenta_overig": {
+          "naam": "Calenta overig",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
+        },
+        "tzerra_ace": {
+          "naam": "Tzerra Ace",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
+          ]
+        },
+        "tzerra_m_plus": {
+          "naam": "Tzerra M Plus",
+          "info": "Imported from documentatie PDF",
+          "storingen": [
+            "1"
           ]
         }
       },
@@ -523,8 +603,6 @@
               "omschrijving": "Vervang de defecte aanvoer- of retoursensor indien de weerstand afwijkt."
             }
           ],
-          "vervanging": "Vervang defecte aanvoer- of retoursensor",
-          "installateur": null,
           "veiligheid": null
         },
         "e1": {
@@ -559,8 +637,6 @@
               "omschrijving": "Controleer aanvoer- en retoursensor; meet weerstand 12-15 kΩ bij 20-25°C."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e2": {
@@ -588,8 +664,6 @@
               "omschrijving": "Controleer bekabeling tussen sensors en bedieningspaneel. Meet sensorweerstand (12-15 kΩ bij 20-25°C)."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e3": {
@@ -614,8 +688,6 @@
               "omschrijving": "Controleer of de ketel op het net is aangesloten en of zekering F1 (2 AT) in orde is."
             }
           ],
-          "vervanging": "Vervang display of besturingsautomaat indien defect",
-          "installateur": "Vervang voedingskabel alleen met Remeha-onderdeel",
           "veiligheid": null
         },
         "e4": {
@@ -645,8 +717,6 @@
               "omschrijving": "Reinig of vervang ionisatie-/ontstekingselektrode. Controleer O2 op vollast en laaglast."
             }
           ],
-          "vervanging": "Vervang ontstekingselektrode of ontstekingstransformator indien nodig",
-          "installateur": null,
           "veiligheid": null
         },
         "e5": {
@@ -672,8 +742,6 @@
               "omschrijving": "Reinig of vervang de ionisatie-/ontstekingselektrode. Controleer tussenafstand 3-4 mm."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e6": {
@@ -693,8 +761,6 @@
               "omschrijving": "De ketel detecteert een vlam terwijl er geen branderstart is. Controleer ontstekingstrafo en automaat."
             }
           ],
-          "vervanging": "Vervang ontstekingstransformator of besturingsautomaat",
-          "installateur": "Schakel een erkend installateur in",
           "veiligheid": null
         },
         "e7": {
@@ -725,8 +791,6 @@
               "omschrijving": "Controleer de elektrische aansluitingen van de pomp."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e8": {
@@ -752,8 +816,6 @@
               "omschrijving": "Controleer of de schoorsteen volgens voorschrift trekt."
             }
           ],
-          "vervanging": "Vervang ventilator indien defect",
-          "installateur": "Bij kortsluiting ventilator: ketel testen zonder ventilatorkabel; ventilator vervangen indien display terugkomt",
           "veiligheid": null
         },
         "e9": {
@@ -783,8 +845,6 @@
               "omschrijving": "Controleer waterdrukschakelaar; vervang indien defect."
             }
           ],
-          "vervanging": "Vervang waterdrukschakelaar indien defect",
-          "installateur": null,
           "veiligheid": null
         },
         "e10": {
@@ -806,8 +866,6 @@
               "omschrijving": "Zelfde controles als bij geen water/pomp: druk, pomp, ontluchting en bekabeling."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e11": {
@@ -825,8 +883,6 @@
               "omschrijving": "Rookgaslekkage: neem contact op met de fabrikant."
             }
           ],
-          "vervanging": null,
-          "installateur": "Neem contact op met Remeha of erkend installateur",
           "veiligheid": null
         },
         "e12": {
@@ -851,8 +907,6 @@
               "omschrijving": "Controleer aansluiting en bedrading van de sensoren."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e13": {
@@ -883,8 +937,6 @@
               "omschrijving": "Vervang warmtewisselaar bij afwijking. Bij thermische beveiliging: contact fabrikant."
             }
           ],
-          "vervanging": "Vervang warmtewisselaar wanneer afwijking wordt geconstateerd",
-          "installateur": "Neem contact op met fabrikant bij thermische beveiliging",
           "veiligheid": null
         },
         "e43": {
@@ -902,8 +954,6 @@
               "omschrijving": "Parameterinstellingen zijn niet juist: zet terug naar fabrieksinstellingen."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e44": {
@@ -921,8 +971,6 @@
               "omschrijving": "Parameterinstellingen zijn niet juist: zet terug naar fabrieksinstellingen."
             }
           ],
-          "vervanging": null,
-          "installateur": null,
           "veiligheid": null
         },
         "e45": {
@@ -941,11 +989,43 @@
               "omschrijving": "Parameterinstellingen zijn niet juist: vervang de besturingsautomaat."
             }
           ],
-          "vervanging": "Vervang besturingsautomaat",
-          "installateur": "Laat parameterherstel uitvoeren door erkend installateur",
+          "veiligheid": null
+        },
+        "1": {
+          "code": "1",
+          "beschrijving": "Veiligheid . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .6",
+          "oorzaken": [],
+          "controlepunten": [],
+          "stappen": [],
           "veiligheid": null
         }
       }
+    },
+    "nefit": {
+      "naam": "Nefit",
+      "kleur": "#e3221d",
+      "beschrijving": "Nefit is een bekend Nederlands ketelmerk. De TrendLine wordt hier per model weergegeven, zonder kW-varianten.",
+      "modellen": {
+        "trendline": {
+          "naam": "TrendLine",
+          "info": "Alle vermogensvarianten samengevoegd",
+          "storingen": []
+        }
+      },
+      "storingen": {}
+    },
+    "vaillant": {
+      "naam": "Vaillant",
+      "kleur": "#79b22f",
+      "beschrijving": "Vaillant is een toonaangevende fabrikant van ecoTEC-ketels. De storingen zijn hier per model toegevoegd, zonder kW-variaties.",
+      "modellen": {
+        "ecotec": {
+          "naam": "ecoTEC",
+          "info": "Alle vermogensvarianten samengevoegd",
+          "storingen": []
+        }
+      },
+      "storingen": {}
     }
   }
 }
